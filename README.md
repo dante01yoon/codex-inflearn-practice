@@ -24,6 +24,13 @@ python3 fetch_chargers.py
 
 지도 실행 방법은 [ev-map/README.md](sec14-openapi/ev-map/README.md)를 보세요.
 
+## 섹션 15. 하네스 엔지니어링
+
+| 폴더 | 내용 | 수업 |
+|---|---|---|
+| [sec15-harness/ev-booking-start](sec15-harness/ev-booking-start/) | 충전소 예약 서비스 시작 파일(제품 문서·환불/체크인/겹침 규칙·테스트 55개). `npm ci` 후 `npx vitest run` | 2강부터 |
+| [sec15-harness/after-lesson2](sec15-harness/after-lesson2/) | 2강을 마친 AGENTS.md(예약·결제 도메인 규칙 절 추가) | 2강 |
+
 ## 데이터 출처
 
 `data/*.json`은 공공데이터포털 「한국환경공단_전기자동차 충전소 정보」(https://www.data.go.kr/data/15076352/openapi.do)에서 2026-10-08에 조회한 일부입니다. 이용허락범위: 공공저작물 출처표시(제1유형). 지도 바탕은 © OpenStreetMap 기여자.
