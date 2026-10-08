@@ -1,11 +1,14 @@
 """Books to Scrape 첫 3페이지를 수집합니다. Python 표준 라이브러리만 사용합니다."""
 
 import csv
+import json
+import re
 import time
 from decimal import Decimal
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import HTTPError
+from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 from urllib.robotparser import RobotFileParser
 
@@ -14,7 +17,7 @@ BASE_URL = "https://books.toscrape.com"
 USER_AGENT = "BooksPracticeCrawler/1.0"
 OUTPUT = Path(__file__).resolve().parent / "books.csv"
 RATINGS = {"One": 1, "Two": 2, "Three": 3, "Four": 4, "Five": 5}
-FIELDS = ["title", "price_gbp", "rating", "availability"]
+FIELDS = ["title", "price_gbp", "rating", "availability", "image_url"]
 
 
 def fetch(url):
@@ -48,8 +51,9 @@ def check_robots(urls):
 
 
 class BookParser(HTMLParser):
-    def __init__(self):
+    def __init__(self, page_url=f"{BASE_URL}/catalogue/page-1.html"):
         super().__init__()
+        self.page_url = page_url
         self.books = []
         self.book = None
         self.field = None
@@ -64,6 +68,8 @@ class BookParser(HTMLParser):
             return
         if tag == "a" and "title" in attrs:
             self.book["title"] = attrs["title"]
+        if tag == "img" and attrs.get("src"):
+            self.book["image_url"] = urljoin(self.page_url, attrs["src"])
         if tag == "p":
             if "star-rating" in classes:
                 self.book["rating"] = next(
@@ -94,6 +100,26 @@ class BookParser(HTMLParser):
             self.book = None
 
 
+def update_catalog(books):
+    """CSV와 같은 데이터를 단일 HTML에 삽입하여 file://에서도 동작하게 합니다."""
+    catalog = OUTPUT.with_name("index.html")
+    if not catalog.exists():
+        return
+    data = json.dumps(books, ensure_ascii=False).replace("<", "\\u003c")
+    html, replacements = re.subn(
+        r'(<script id="book-data" type="application/json">).*?(</script>)',
+        lambda match: match[1] + data + match[2],
+        catalog.read_text(encoding="utf-8"),
+        flags=re.DOTALL,
+    )
+    if replacements != 1:
+        raise ValueError("index.html에 book-data 영역이 정확히 하나 있어야 합니다.")
+    temporary = catalog.with_suffix(".html.tmp")
+    temporary.write_text(html, encoding="utf-8")
+    temporary.replace(catalog)
+    print(f"카탈로그 갱신: {catalog}")
+
+
 def main():
     urls = [f"{BASE_URL}/catalogue/page-{page}.html" for page in range(1, 4)]
     delay = check_robots(urls)  # 책 목록 요청 전에 반드시 확인합니다.
@@ -102,7 +128,7 @@ def main():
         if index:
             print(f"{delay:g}초 대기")
             time.sleep(delay)
-        parser = BookParser()
+        parser = BookParser(url)
         parser.feed(fetch(url))
         parser.close()
         if len(parser.books) != 20:
@@ -120,6 +146,7 @@ def main():
     # 메모리의 수집 결과 대신 실제 저장 파일을 다시 읽어 집계합니다.
     with OUTPUT.open(encoding="utf-8-sig", newline="") as file:
         saved = list(csv.DictReader(file))
+    update_catalog(saved)
     print(f"\n저장 완료: {OUTPUT} ({len(saved)}권)")
     print("\n| 책 제목 | 가격(GBP) | 별점 | 재고 |")
     print("|---|---:|---:|---|")
