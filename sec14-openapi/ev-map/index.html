@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>서울 충전소 지도</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif; color: #172c28; background: #f5f8f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header { padding: 26px 32px 22px; background: white; border-bottom: 1px solid #dae5df; display: flex; gap: 20px; justify-content: space-between; align-items: center; }
+    h1 { font-size: 26px; letter-spacing: -1px; margin: 0 0 8px; }
+    header p { color: #61716a; font-size: 14px; margin: 0; line-height: 1.6; }
+    button { font: inherit; font-size: 14px; font-weight: 600; background: white; color: #23634e; border: 1px solid #b8d1c5; border-radius: 8px; padding: 12px 16px; cursor: pointer; white-space: nowrap; }
+    button:hover { background: #edf6f1; }
+    button:focus-visible { outline: 3px solid #68a78b; outline-offset: 3px; }
+    main { max-width: 1600px; margin: auto; padding: 20px 32px 24px; }
+    .summary { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; font-size: 14px; align-items: center; }
+    .summary strong { font-size: 18px; margin-right: 5px; }
+    .legend { color: #61716a; display: flex; align-items: center; gap: 8px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: #19815e; display: inline-block; }
+    #map { height: calc(100dvh - 240px); min-height: 380px; border: 1px solid #d5e0da; border-radius: 12px; background: #e7eee9; }
+    #status { font-size: 13px; color: #61716a; line-height: 1.7; margin: 12px 0 0; }
+    #status.error { color: #a53427; }
+    .leaflet-popup-content { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif; line-height: 1.65; min-width: 180px; }
+    .station-name { display: block; font-size: 16px; color: #172c28; }
+    .station-address { margin: 7px 0 !important; color: #61716a; }
+    .station-count { color: #176546; font-weight: 700; }
+    @media (max-width: 600px) { header { padding: 20px 18px; align-items: flex-start; } h1 { font-size: 22px; } header p { max-width: 220px; } button { padding: 10px; font-size: 12px; } main { padding: 16px 14px; } .summary { gap: 12px; } #map { height: calc(100dvh - 270px); min-height: 350px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div><h1>서울 충전소 지도</h1><p>지도 위 초록색 점을 누르면 충전소 정보를 볼 수 있습니다.</p></div>
+    <button id="reset" type="button">전체 보기</button>
+  </header>
+  <main>
+    <div class="summary" aria-live="polite">
+      <span>충전소 <strong id="station-count">—</strong>곳</span>
+      <span>조회한 충전기 <strong id="charger-count">—</strong>개</span>
+      <span class="legend"><span class="dot" aria-hidden="true"></span>점 하나 = 충전소 하나</span>
+    </div>
+    <div id="map" role="region" aria-label="서울 전기자동차 충전소 지도"></div>
+    <p id="status" role="status">충전소 데이터를 불러오는 중입니다…</p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const status = document.getElementById('status');
+    async function start() {
+      if (!window.L) throw new Error('지도 라이브러리를 불러오지 못했습니다. 인터넷 연결 후 새로고침해 주세요.');
+      const map = L.map('map').setView([37.5665, 126.978], 11);
+      const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      tiles.on('tileerror', () => { status.textContent = '배경 지도 일부를 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.'; status.classList.add('error'); });
+      const response = await fetch('./data/seoul.json');
+      if (!response.ok) throw new Error('충전소 데이터를 읽지 못했습니다. fetch_chargers.py를 실행해 주세요.');
+      const data = await response.json();
+      const markers = L.featureGroup().addTo(map);
+      for (const station of data.stations) {
+        if (!Number.isFinite(station.lat) || !Number.isFinite(station.lng)) continue;
+        const content = document.createElement('div');
+        const name = document.createElement('strong');
+        name.className = 'station-name'; name.textContent = station.name;
+        const address = document.createElement('p');
+        address.className = 'station-address'; address.textContent = station.address;
+        const count = document.createElement('span');
+        count.className = 'station-count'; count.textContent = `조회한 충전기 ${station.chargerCount}개`;
+        content.append(name, address, count);
+        const marker = L.circleMarker([station.lat, station.lng], {
+          radius: 7, color: '#ffffff', weight: 2, fillColor: '#19815e', fillOpacity: 0.9
+        }).bindPopup(content).bindTooltip(station.name).addTo(markers);
+        const element = marker.getElement();
+        element.setAttribute('tabindex', '0');
+        element.setAttribute('role', 'button');
+        element.setAttribute('aria-label', `${station.name}, 충전기 ${station.chargerCount}개`);
+        element.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); marker.openPopup(); }
+        });
+      }
+      const fit = () => {
+        if (markers.getLayers().length) map.fitBounds(markers.getBounds(), { padding: [30, 30], maxZoom: 14 });
+      };
+      document.getElementById('reset').addEventListener('click', () => { map.closePopup(); fit(); });
+      fit();
+      document.getElementById('station-count').textContent = data.stationCount.toLocaleString('ko-KR');
+      document.getElementById('charger-count').textContent = data.chargerCount.toLocaleString('ko-KR');
+      const skipped = data.unmappedStationCount ? ` · 좌표가 없는 충전소 ${data.unmappedStationCount}곳은 지도에서 제외` : '';
+      status.textContent = `서울 충전기 최대 500개 중 조회한 데이터입니다. 충전기 수는 이번 조회 범위 기준입니다.${skipped} · 조회: ${new Date(data.fetchedAt).toLocaleString('ko-KR')}`;
+    }
+    start().catch(error => { status.textContent = error.message; status.classList.add('error'); });
+  </script>
+</body>
+</html>

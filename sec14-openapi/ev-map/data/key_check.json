@@ -1,0 +1,9 @@
+[
+  {
+    "mode": "encoded",
+    "status": "PASS",
+    "http_status": 200,
+    "result_code": "00",
+    "count": 500
+  }
+]
