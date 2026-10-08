@@ -38,8 +38,13 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory /tmp/seoul-charger-web
 지도 점은 키보드 Tab으로 선택하고 Enter 또는 Space로 열 수도 있습니다.
 HTML은 상대 경로로 JSON을 읽으므로 파일 더블클릭 대신 HTTP 서버로 실행하세요.
 
-지도는 [Leaflet](https://leafletjs.com/reference.html) 1.9.4와
-[OpenStreetMap](https://www.openstreetmap.org/copyright)을 사용합니다.
+지도는 [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/) 6.13.0과
+[OpenFreeMap Liberty](https://openfreemap.org/quick_start/) 벡터 지도를 사용합니다.
+서울역 확대 버튼은 서울역 주변을 줌 16.8, 기울기 58도로 보여 줍니다.
+기울기 슬라이더(0–65도), 오른쪽 드래그, 나침반으로 시점을 조절할 수 있습니다.
+줌 15부터 건물이 서서히 올라오며 줌 16부터 데이터의 높이로 표시합니다.
+건물은 벡터 데이터의 render_height/render_min_height를 사용하므로 높이 정보가
+없는 건물은 입체로 표시되지 않을 수 있습니다.
 라이브러리와 지도 타일을 불러오려면 인터넷 연결이 필요합니다.
 
 ## 검증

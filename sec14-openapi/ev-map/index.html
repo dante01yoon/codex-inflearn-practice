@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>서울 충전소 지도</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.13.0/dist/maplibre-gl.css">
   <style>
     :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif; color: #172c28; background: #f5f8f7; }
     * { box-sizing: border-box; }
@@ -20,20 +20,26 @@
     .summary strong { font-size: 18px; margin-right: 5px; }
     .legend { color: #61716a; display: flex; align-items: center; gap: 8px; }
     .dot { width: 10px; height: 10px; border-radius: 50%; background: #19815e; display: inline-block; }
-    #map { height: calc(100dvh - 240px); min-height: 380px; border: 1px solid #d5e0da; border-radius: 12px; background: #e7eee9; }
+    #map { height: calc(100dvh - 280px); min-height: 380px; border: 1px solid #d5e0da; border-radius: 12px; background: #e7eee9; }
     #status { font-size: 13px; color: #61716a; line-height: 1.7; margin: 12px 0 0; }
     #status.error { color: #a53427; }
-    .leaflet-popup-content { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif; line-height: 1.65; min-width: 180px; }
+    .maplibregl-popup-content { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif; line-height: 1.65; min-width: 180px; }
+    .map-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .view-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; font-size: 13px; color: #61716a; }
+    #pitch { accent-color: #19815e; width: 120px; }
+    .charger-dot { width: 16px; height: 16px; padding: 0; border: 2px solid white; border-radius: 50%; background: #19815e; box-shadow: 0 1px 5px #183f3655; }
+    .charger-dot:hover { background: #105f44; }
+    .maplibregl-popup-close-button { border: 0; padding: 2px 6px; }
     .station-name { display: block; font-size: 16px; color: #172c28; }
     .station-address { margin: 7px 0 !important; color: #61716a; }
     .station-count { color: #176546; font-weight: 700; }
-    @media (max-width: 600px) { header { padding: 20px 18px; align-items: flex-start; } h1 { font-size: 22px; } header p { max-width: 220px; } button { padding: 10px; font-size: 12px; } main { padding: 16px 14px; } .summary { gap: 12px; } #map { height: calc(100dvh - 270px); min-height: 350px; } }
+    @media (max-width: 600px) { header { padding: 20px 18px; align-items: flex-start; } h1 { font-size: 22px; } header p { max-width: 220px; } button { padding: 10px; font-size: 12px; } main { padding: 16px 14px; } .summary { gap: 12px; } #map { height: calc(100dvh - 330px); min-height: 350px; } }
   </style>
 </head>
 <body>
   <header>
     <div><h1>서울 충전소 지도</h1><p>지도 위 초록색 점을 누르면 충전소 정보를 볼 수 있습니다.</p></div>
-    <button id="reset" type="button">전체 보기</button>
+    <div class="map-actions"><button id="station-view" type="button">서울역 확대</button><button id="reset" type="button">전체 보기</button></div>
   </header>
   <main>
     <div class="summary" aria-live="polite">
@@ -41,25 +47,60 @@
       <span>조회한 충전기 <strong id="charger-count">—</strong>개</span>
       <span class="legend"><span class="dot" aria-hidden="true"></span>점 하나 = 충전소 하나</span>
     </div>
+    <div class="view-controls"><label for="pitch">지도 기울기</label><input id="pitch" type="range" min="0" max="65" value="45"><output id="pitch-value" for="pitch">45°</output><span>오른쪽 버튼으로 드래그하면 회전·기울기 조절 · 확대하면 3D 건물 표시</span></div>
     <div id="map" role="region" aria-label="서울 전기자동차 충전소 지도"></div>
     <p id="status" role="status">충전소 데이터를 불러오는 중입니다…</p>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
+  <script type="module">
+    import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.13.0/dist/maplibre-gl.mjs';
     const status = document.getElementById('status');
+    const pitch = document.getElementById('pitch');
+    const pitchValue = document.getElementById('pitch-value');
     async function start() {
-      if (!window.L) throw new Error('지도 라이브러리를 불러오지 못했습니다. 인터넷 연결 후 새로고침해 주세요.');
-      const map = L.map('map').setView([37.5665, 126.978], 11);
-      const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      }).addTo(map);
-      tiles.on('tileerror', () => { status.textContent = '배경 지도 일부를 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.'; status.classList.add('error'); });
+      const map = new maplibregl.Map({
+        container: 'map', style: 'https://tiles.openfreemap.org/styles/liberty',
+        center: [126.978, 37.5665], zoom: 11, pitch: 45, maxPitch: 65,
+        canvasContextAttributes: { antialias: true }
+      });
+      map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+      map.addControl(new maplibregl.ScaleControl(), 'bottom-left');
+      map.on('error', () => {
+        status.textContent = '지도 일부를 불러오지 못했습니다. 인터넷 연결 후 새로고침해 주세요.';
+        status.classList.add('error');
+      });
+      map.on('load', () => {
+        const labelLayer = map.getStyle().layers.find(layer => layer.type === 'symbol' && layer.layout?.['text-field']);
+        map.addSource('openfreemap-buildings', { type: 'vector', url: 'https://tiles.openfreemap.org/planet' });
+        map.addLayer({
+          id: '3d-buildings', type: 'fill-extrusion', source: 'openfreemap-buildings',
+          'source-layer': 'building', minzoom: 15,
+          filter: ['!=', ['get', 'hide_3d'], true],
+          paint: {
+            'fill-extrusion-color': '#bac8c5',
+            'fill-extrusion-height': ['interpolate', ['linear'], ['zoom'], 15, 0, 16, ['coalesce', ['get', 'render_height'], 0]],
+            'fill-extrusion-base': ['coalesce', ['get', 'render_min_height'], 0],
+            'fill-extrusion-opacity': 0.92
+          }
+        }, labelLayer?.id);
+        map.setLight({ anchor: 'viewport', color: '#ffffff', intensity: 0.45, position: [1.5, 210, 45] });
+      });
+      pitch.addEventListener('input', () => map.setPitch(Number(pitch.value)));
+      map.on('pitch', () => {
+        pitch.value = Math.round(map.getPitch());
+        pitchValue.textContent = `${Math.round(map.getPitch())}°`;
+      });
+      document.getElementById('station-view').addEventListener('click', () => {
+        map.flyTo({ center: [126.9726, 37.5559], zoom: 16.8, pitch: 58, bearing: -25 });
+      });
       const response = await fetch('./data/seoul.json');
       if (!response.ok) throw new Error('충전소 데이터를 읽지 못했습니다. fetch_chargers.py를 실행해 주세요.');
       const data = await response.json();
-      const markers = L.featureGroup().addTo(map);
+      const bounds = new maplibregl.LngLatBounds();
+      const popups = [];
       for (const station of data.stations) {
         if (!Number.isFinite(station.lat) || !Number.isFinite(station.lng)) continue;
+        const coordinates = [station.lng, station.lat];
+        bounds.extend(coordinates);
         const content = document.createElement('div');
         const name = document.createElement('strong');
         name.className = 'station-name'; name.textContent = station.name;
@@ -68,21 +109,26 @@
         const count = document.createElement('span');
         count.className = 'station-count'; count.textContent = `조회한 충전기 ${station.chargerCount}개`;
         content.append(name, address, count);
-        const marker = L.circleMarker([station.lat, station.lng], {
-          radius: 7, color: '#ffffff', weight: 2, fillColor: '#19815e', fillOpacity: 0.9
-        }).bindPopup(content).bindTooltip(station.name).addTo(markers);
-        const element = marker.getElement();
-        element.setAttribute('tabindex', '0');
-        element.setAttribute('role', 'button');
+        const element = document.createElement('button');
+        element.type = 'button'; element.className = 'charger-dot';
+        element.title = station.name;
         element.setAttribute('aria-label', `${station.name}, 충전기 ${station.chargerCount}개`);
+        const popup = new maplibregl.Popup({ offset: 12, maxWidth: '300px' }).setDOMContent(content);
+        popups.push(popup);
+        const marker = new maplibregl.Marker({ element, anchor: 'center' })
+          .setLngLat(coordinates).setPopup(popup).addTo(map);
+        element.addEventListener('click', () => popups.forEach(other => { if (other !== popup) other.remove(); }));
         element.addEventListener('keydown', event => {
-          if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); marker.openPopup(); }
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault(); element.click();
+          }
         });
       }
       const fit = () => {
-        if (markers.getLayers().length) map.fitBounds(markers.getBounds(), { padding: [30, 30], maxZoom: 14 });
+        popups.forEach(popup => popup.remove());
+        if (!bounds.isEmpty()) map.fitBounds(bounds, { padding: 40, maxZoom: 14, pitch: 45, bearing: 0, duration: 600 });
       };
-      document.getElementById('reset').addEventListener('click', () => { map.closePopup(); fit(); });
+      document.getElementById('reset').addEventListener('click', fit);
       fit();
       document.getElementById('station-count').textContent = data.stationCount.toLocaleString('ko-KR');
       document.getElementById('charger-count').textContent = data.chargerCount.toLocaleString('ko-KR');

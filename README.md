@@ -10,7 +10,7 @@
 
 | 폴더 | 내용 | 수업 |
 |---|---|---|
-| [sec14-openapi/ev-map](sec14-openapi/ev-map/) | 자세한 프롬프트로 만든 충전소 API 스크립트(`fetch_chargers.py`) → 서울 충전소 지도(`index.html`, `data/seoul.json`)까지. **3강이 끝난 상태** | 2강, 3강 |
+| [sec14-openapi/ev-map](sec14-openapi/ev-map/) | 자세한 프롬프트로 만든 충전소 API 스크립트(`fetch_chargers.py`) → 서울 충전소 지도(`index.html`, `data/seoul.json`) → MapLibre·OpenFreeMap 3D 건물 지도 개선까지. **3강이 끝난 상태** | 2강, 3강 |
 | [sec14-openapi/ev-map-short-prompt](sec14-openapi/ev-map-short-prompt/) | 같은 일을 짧은 프롬프트로 맡긴 결과(비교용) | 2강 |
 
 ### 실행
