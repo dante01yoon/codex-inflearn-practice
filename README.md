@@ -12,7 +12,7 @@
 |---|---|---|
 | [sec14-openapi/ev-map](sec14-openapi/ev-map/) | 자세한 프롬프트로 만든 충전소 API 스크립트(`fetch_chargers.py`) → 서울 충전소 지도(`index.html`, `data/seoul.json`) → MapLibre·OpenFreeMap 3D 건물 지도 개선까지. **3강이 끝난 상태** | 2강, 3강 |
 | [sec14-openapi/ev-map-short-prompt](sec14-openapi/ev-map-short-prompt/) | 같은 일을 짧은 프롬프트로 맡긴 결과(비교용) | 2강 |
-| [sec14-openapi/books-crawl](sec14-openapi/books-crawl/) | 크롤링 연습 사이트 books.toscrape.com 첫 3페이지 책 목록 크롤러(`crawl_books.py`)와 `books.csv`, 표지·가격대 그래프가 있는 카탈로그(`index.html`). robots.txt 확인, 요청 사이 1초 대기 | 4강 |
+| [sec14-openapi/books-crawl](sec14-openapi/books-crawl/) | 크롤링 연습 사이트 books.toscrape.com 첫 3페이지 책 목록 크롤러(`crawl_books.py`)와 `books.csv`, 표지·가격대 그래프가 있는 카탈로그(`index.html`). robots.txt 확인, 요청 사이 1초 대기. 같은 폴더에 Playwright 명언 크롤러(`crawl_quotes.py`, `quotes.csv`)와 명언 페이지(`quotes.html`) — `pip install -r requirements.txt` 후 `playwright install chromium` | 4강, 5강 |
 
 ### 실행
 

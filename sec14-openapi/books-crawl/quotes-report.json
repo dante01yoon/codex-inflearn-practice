@@ -1,0 +1,18 @@
+{
+  "urls": [
+    "https://quotes.toscrape.com/js/",
+    "https://quotes.toscrape.com/js/page/2/"
+  ],
+  "robots": "HTTP 404 (규칙 파일 없음)",
+  "delay_seconds": 1.0,
+  "regular_counts": [
+    0,
+    0
+  ],
+  "playwright_counts": [
+    10,
+    10
+  ],
+  "saved_rows": 20,
+  "csv_verified": true
+}

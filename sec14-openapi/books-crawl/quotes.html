@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#23493c">
+<title>문장의 숲 — 마음에 남는 한 문장</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2323493c'/%3E%3Ctext x='10' y='34' font-size='38' fill='%23f5f3ec'%3E%E2%80%9C%3C/text%3E%3C/svg%3E">
+<style>
+:root { color-scheme: light; --paper:#f5f3ec; --ink:#23493c; --muted:#65716a; --line:#cbd2ca; --serif:Georgia,'Times New Roman','AppleMyungjo','Batang',serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+button { font:inherit; color:inherit; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+button:focus-visible, a:focus-visible { outline:3px solid #b58444; outline-offset:4px; }
+.page { max-width:1200px; margin:auto; padding:28px 40px 20px; }
+header { display:flex; justify-content:space-between; align-items:center; gap:24px; }
+.brand { font-family:var(--serif); font-size:25px; font-weight:700; letter-spacing:-1px; }
+.header-note { font-family:var(--serif); font-size:16px; color:var(--muted); }
+.intro { margin:52px 0 28px; }
+h1 { font-family:var(--serif); font-size:clamp(34px,4.4vw,57px); font-weight:600; letter-spacing:-2px; margin:0 0 16px; line-height:1.2; }
+.intro p { color:var(--muted); font-size:18px; margin:0; line-height:1.6; }
+#tag-cloud { display:flex; align-items:center; flex-wrap:wrap; gap:8px; padding:3px 0; }
+.tag-button { border:1px solid var(--line); border-radius:8px; background:transparent; padding:8px 12px; font-family:var(--serif); font-size:15px; line-height:1.2; display:inline-flex; gap:7px; align-items:center; max-width:100%; overflow-wrap:anywhere; transition:background .15s,border-color .15s; }
+.tag-button:hover { background:#e8ece4; border-color:#8faaa0; }
+.tag-button[aria-pressed="true"] { background:var(--ink); color:white; border-color:var(--ink); }
+.tag-button.frequent { font-size:17px; }
+.tag-count { font-size:12px; opacity:.7; }
+.filter-line { display:flex; justify-content:space-between; align-items:center; gap:12px; color:var(--muted); font-size:13px; margin:23px 0 12px; }
+#filter-label { overflow-wrap:anywhere; }
+.quote-card { position:relative; background:#fff; border:1px solid var(--line); border-left:5px solid var(--ink); border-radius:7px; padding:36px 38px 28px; min-height:310px; display:flex; flex-direction:column; justify-content:center; }
+blockquote { padding:0; margin:0; }
+#quote-text { font-family:var(--serif); font-size:clamp(28px,3.8vw,48px); letter-spacing:-1.1px; line-height:1.24; margin:0 0 22px; overflow-wrap:break-word; }
+.attribution { display:flex; gap:16px; align-items:center; font-family:var(--serif); font-size:21px; margin:0 0 20px; color:#466858; }
+cite { font-style:normal; }
+#quote-tags { display:flex; gap:8px; flex-wrap:wrap; }
+#quote-tags .tag-button { font-size:14px; padding:6px 10px; }
+.navigation { display:grid; grid-template-columns:1fr minmax(120px,36%) 1fr; align-items:center; gap:20px; padding:22px 0 24px; }
+.nav-button { padding:0; border:0; background:transparent; display:flex; gap:12px; align-items:center; font-size:15px; justify-self:start; }
+.nav-button:last-child { justify-self:end; }
+.circle { display:grid; place-items:center; width:45px; height:45px; border:1px solid var(--ink); border-radius:50%; transition:transform .15s; }
+.circle svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.7; }
+#next .circle { background:var(--ink); color:white; }
+.nav-button:hover:not(:disabled) .circle { transform:scale(1.07); }
+.nav-button:disabled { opacity:.3; cursor:default; }
+.progress { text-align:center; }
+#position { display:block; font-family:var(--serif); font-size:18px; margin-bottom:10px; font-variant-numeric:tabular-nums; }
+.track { background:#dce0d7; height:4px; border-radius:5px; overflow:hidden; }
+#progress-fill { height:100%; background:var(--ink); border-radius:5px; transition:width .2s; }
+footer { border-top:1px solid var(--line); padding-top:17px; text-align:center; color:var(--muted); font-size:12px; }
+footer a { color:inherit; text-decoration-color:#a6b7aa; text-underline-offset:3px; }
+.keyboard-hint { font-size:12px; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.enter { animation:appear .22s ease-out; }
+@keyframes appear { from { opacity:.4; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+@media (min-width:601px) and (max-width:1100px) {
+ .intro { margin:32px 0 22px; }
+ #tag-cloud { max-height:174px; overflow:auto; padding-right:7px; scrollbar-width:thin; scrollbar-color:#abb9ab transparent; }
+ .quote-card { min-height:280px; padding:28px 32px; }
+ .navigation { padding:18px 0; }
+}
+@media (max-width:600px) {
+ .page { padding:23px 20px 20px; }
+ .brand { font-size:23px; }
+ .header-note { font-size:12px; max-width:126px; text-align:right; line-height:1.6; }
+ .intro { margin:38px 0 22px; }
+ h1 { letter-spacing:-1.4px; }
+ .intro p { font-size:14px; }
+ #tag-cloud { max-height:164px; overflow:auto; padding:4px 3px 7px; scrollbar-width:thin; scrollbar-color:#abb9ab transparent; }
+ .tag-button { padding:8px 10px; font-size:13px; }
+ .tag-button.frequent { font-size:14px; }
+ .filter-line { font-size:12px; margin-top:20px; }
+ .keyboard-hint { display:none; }
+ .quote-card { padding:26px 23px; min-height:330px; }
+ #quote-text { font-size:30px; letter-spacing:-.6px; line-height:1.25; }
+ .attribution { font-size:18px; gap:12px; }
+ .navigation { gap:14px; grid-template-columns:1fr 100px 1fr; }
+ .nav-button { gap:7px; font-size:12px; }
+ .circle { width:36px; height:36px; }
+ footer { font-size:11px; line-height:1.7; }
+}
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } }
+</style>
+</head>
+<body>
+<main class="page">
+ <header><span class="brand">문장의 숲</span><span class="header-note">20개의 문장, 잠시 머무는 시간</span></header>
+ <section class="intro"><h1>마음에 남는 한 문장.</h1><p>태그를 골라, 지금 필요한 문장을 만나보세요.</p></section>
+ <section aria-label="태그로 명언 찾기"><h2 class="sr-only">태그 클라우드</h2><div id="tag-cloud" aria-label="명언 태그"></div></section>
+ <div class="filter-line"><span id="filter-label" role="status"></span><span class="keyboard-hint">← → 키로도 넘길 수 있어요</span></div>
+ <article class="quote-card" aria-label="명언 카드">
+  <div id="card-content" aria-live="polite" aria-atomic="true">
+   <blockquote><p id="quote-text"></p></blockquote>
+   <p class="attribution"><span aria-hidden="true">—</span><cite id="quote-author"></cite></p>
+  </div>
+  <div id="quote-tags" aria-label="현재 명언의 태그"></div>
+ </article>
+ <nav class="navigation" aria-label="명언 넘기기">
+  <button id="prev" class="nav-button" aria-label="이전 명언"><span class="circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14 5-7 7 7 7"/></svg></span><span>이전</span></button>
+  <div class="progress"><span id="position" aria-live="polite"></span><div class="track" aria-hidden="true"><div id="progress-fill"></div></div></div>
+  <button id="next" class="nav-button" aria-label="다음 명언"><span>다음</span><span class="circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m10 5 7 7-7 7"/></svg></span></button>
+ </nav>
+ <footer><a href="https://quotes.toscrape.com/js/" target="_blank" rel="noopener noreferrer">Quotes to Scrape</a>에서 수집한 명언 · 첫 2페이지</footer>
+ <noscript>명언을 넘기고 태그를 선택하려면 JavaScript를 켜 주세요.</noscript>
+</main>
+<script id="quotes-data" type="application/json">[{"quote": "“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”", "author": "Albert Einstein", "tags": ["change", "deep-thoughts", "thinking", "world"]}, {"quote": "“It is our choices, Harry, that show what we truly are, far more than our abilities.”", "author": "J.K. Rowling", "tags": ["abilities", "choices"]}, {"quote": "“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”", "author": "Albert Einstein", "tags": ["inspirational", "life", "live", "miracle", "miracles"]}, {"quote": "“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”", "author": "Jane Austen", "tags": ["aliteracy", "books", "classic", "humor"]}, {"quote": "“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”", "author": "Marilyn Monroe", "tags": ["be-yourself", "inspirational"]}, {"quote": "“Try not to become a man of success. Rather become a man of value.”", "author": "Albert Einstein", "tags": ["adulthood", "success", "value"]}, {"quote": "“It is better to be hated for what you are than to be loved for what you are not.”", "author": "André Gide", "tags": ["life", "love"]}, {"quote": "“I have not failed. I've just found 10,000 ways that won't work.”", "author": "Thomas A. Edison", "tags": ["edison", "failure", "inspirational", "paraphrased"]}, {"quote": "“A woman is like a tea bag; you never know how strong it is until it's in hot water.”", "author": "Eleanor Roosevelt", "tags": ["misattributed-eleanor-roosevelt"]}, {"quote": "“A day without sunshine is like, you know, night.”", "author": "Steve Martin", "tags": ["humor", "obvious", "simile"]}, {"quote": "“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything - they're your true best friends. Don't let go of them. Also remember, sisters make the best friends in the world. As for lovers, well, they'll come and go too. And baby, I hate to say it, most of them - actually pretty much all of them are going to break your heart, but you can't give up because if you give up, you'll never find your soulmate. You'll never find that half who makes you whole and that goes for everything. Just because you fail once, doesn't mean you're gonna fail at everything. Keep trying, hold on, and always, always, always believe in yourself, because if you don't, then who will, sweetie? So keep your head high, keep your chin up, and most importantly, keep smiling, because life's a beautiful thing and there's so much to smile about.”", "author": "Marilyn Monroe", "tags": ["friends", "heartbreak", "inspirational", "life", "love", "sisters"]}, {"quote": "“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”", "author": "J.K. Rowling", "tags": ["courage", "friends"]}, {"quote": "“If you can't explain it to a six year old, you don't understand it yourself.”", "author": "Albert Einstein", "tags": ["simplicity", "understand"]}, {"quote": "“You may not be her first, her last, or her only. She loved before she may love again. But if she loves you now, what else matters? She's not perfect—you aren't either, and the two of you may never be perfect together but if she can make you laugh, cause you to think twice, and admit to being human and making mistakes, hold onto her and give her the most you can. She may not be thinking about you every second of the day, but she will give you a part of her that she knows you can break—her heart. So don't hurt her, don't change her, don't analyze and don't expect more than she can give. Smile when she makes you happy, let her know when she makes you mad, and miss her when she's not there.”", "author": "Bob Marley", "tags": ["love"]}, {"quote": "“I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living.”", "author": "Dr. Seuss", "tags": ["fantasy"]}, {"quote": "“I may not have gone where I intended to go, but I think I have ended up where I needed to be.”", "author": "Douglas Adams", "tags": ["life", "navigation"]}, {"quote": "“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference.”", "author": "Elie Wiesel", "tags": ["activism", "apathy", "hate", "indifference", "inspirational", "love", "opposite", "philosophy"]}, {"quote": "“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”", "author": "Friedrich Nietzsche", "tags": ["friendship", "lack-of-friendship", "lack-of-love", "love", "marriage", "unhappy-marriage"]}, {"quote": "“Good friends, good books, and a sleepy conscience: this is the ideal life.”", "author": "Mark Twain", "tags": ["books", "contentment", "friends", "friendship", "life"]}, {"quote": "“Life is what happens to us while we are making other plans.”", "author": "Allen Saunders", "tags": ["fate", "life", "misattributed-john-lennon", "planning", "plans"]}]</script>
+<script>
+const quotes = JSON.parse(document.getElementById('quotes-data').textContent);
+const counts = new Map();
+quotes.forEach(quote => quote.tags.forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1)));
+const tags = [...counts.keys()].sort((a,b) => counts.get(b)-counts.get(a) || a.localeCompare(b));
+let activeTag = null;
+let index = 0;
+let filtered = quotes;
+const $ = id => document.getElementById(id);
+const tagButtons = new Map();
+function makeTagButton(tag, cloud = false) {
+ const button = document.createElement('button');
+ button.type = 'button';
+ button.className = 'tag-button' + (cloud && (tag === null || counts.get(tag) > 1) ? ' frequent' : '');
+ const label = tag === null ? '전체' : tag;
+ const count = tag === null ? quotes.length : counts.get(tag);
+ button.setAttribute('aria-label', `${label} · ${count}개`);
+ const name = document.createElement('span');
+ name.textContent = label;
+ button.append(name);
+ if (cloud) {
+  const badge = document.createElement('span');
+  badge.className = 'tag-count'; badge.textContent = count;
+  button.append(badge);
+  button.setAttribute('aria-pressed', 'false');
+  tagButtons.set(tag,button);
+ }
+ button.addEventListener('click', () => selectTag(tag));
+ return button;
+}
+function selectTag(tag) {
+ activeTag = tag;
+ filtered = tag === null ? quotes : quotes.filter(quote => quote.tags.includes(tag));
+ index = 0;
+ tagButtons.forEach((button,key) => button.setAttribute('aria-pressed', String(key === tag)));
+ $('filter-label').textContent = `${tag === null ? '전체 명언' : '#'+tag} · ${filtered.length}개의 문장`;
+ render();
+}
+function render() {
+ const quote = filtered[index];
+ $('quote-text').textContent = quote.quote;
+ $('quote-author').textContent = quote.author;
+ $('quote-tags').replaceChildren(...quote.tags.map(tag => makeTagButton(tag)));
+ $('position').textContent = `${String(index+1).padStart(2,'0')} / ${String(filtered.length).padStart(2,'0')}`;
+ $('progress-fill').style.width = `${(index+1)/filtered.length*100}%`;
+ $('prev').disabled = $('next').disabled = filtered.length <= 1;
+ const card = $('card-content');
+ card.classList.remove('enter');
+ void card.offsetWidth;
+ card.classList.add('enter');
+}
+function move(direction) {
+ if (filtered.length <= 1) return;
+ index = (index + direction + filtered.length) % filtered.length;
+ render();
+}
+$('tag-cloud').append(makeTagButton(null,true), ...tags.map(tag => makeTagButton(tag,true)));
+$('prev').addEventListener('click', () => move(-1));
+$('next').addEventListener('click', () => move(1));
+document.addEventListener('keydown', event => {
+ if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.target.closest('input,textarea,select,[contenteditable]')) return;
+ if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+  event.preventDefault(); move(event.key === 'ArrowLeft' ? -1 : 1);
+ }
+});
+selectTag(null);
+</script>
+</body>
+</html>
