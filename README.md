@@ -6,6 +6,12 @@
 - 촬영 환경: 챗GPT 데스크톱 앱(macOS)의 코덱스, GPT-6.1 Sol Medium, 2026-10-08
 - 인증키가 들어 있는 `.env`는 올리지 않았습니다. `.env.example`을 `.env`로 복사하고, 공공데이터포털에서 받은 내 인증키를 넣어 쓰세요.
 
+## 섹션 12. 코덱스 클라우드
+
+| 폴더 | 내용 | 수업 |
+|---|---|---|
+| [sec12-cloud/tailscale](sec12-cloud/tailscale/) | Codex Cloud 환경에 Tailscale VPN 연결 — 정책 예시와 실습 저장소·사내 API 서버 링크 | [GPT6.1 업데이트] Codex Cloud에서 Tailscale로 사내 서버 연결하기 |
+
 ## 섹션 14. 오픈 API와 웹 크롤링
 
 | 폴더 | 내용 | 수업 |

@@ -1,0 +1,17 @@
+// 개인 테스트 tailnet용 예시 정책. 회사 tailnet에 그대로 붙여 넣지 마세요.
+{
+  "tagOwners": {
+    "tag:codex": ["autogroup:admin"],
+    "tag:demo-api": ["autogroup:admin"],
+  },
+  "grants": [
+    // 사람(멤버)은 자기 tailnet 전체에 접근
+    {"src": ["autogroup:member"], "dst": ["*"], "ip": ["*"]},
+    // Codex Cloud VM은 데모 API의 8080 포트에만 접근 (9090 관리자 포트는 막힘)
+    {"src": ["tag:codex"], "dst": ["tag:demo-api"], "ip": ["tcp:8080"]},
+  ],
+  // 저장할 때마다 자동 검사: 8080은 열리고 9090은 막혀야 한다
+  "tests": [
+    {"src": "tag:codex", "accept": ["tag:demo-api:8080"], "deny": ["tag:demo-api:9090"]},
+  ],
+}
