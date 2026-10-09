@@ -39,6 +39,9 @@ python3 fetch_chargers.py
 | [sec15-harness/after-lesson3](sec15-harness/after-lesson3/) | 3강을 마친 `.codex/guard.sh`·`hooks.json`(tests/ 수정과 토스페이먼츠 실제 키 차단 PreToolUse 훅). 시작 파일 폴더에 `.codex`를 복사한 뒤 `git init`하고, 앱 설정 > Hooks에서 Trust를 눌러야 동작합니다. `jq` 필요 | 3강 |
 | [sec15-harness/after-lesson4](sec15-harness/after-lesson4/) | 4강을 마친 `.codex`(3강 `guard.sh` + Stop 훅 `verify.sh`: 끝내기 전 `vitest`·`tsc` 실행, 실패하면 한 번 더 고치게 함). 새 훅이라 Hooks에서 다시 Trust 필요 | 4강 |
 | [sec15-harness/after-lesson5](sec15-harness/after-lesson5/) | 5강을 마친 하네스 전체: AGENTS.md(막혔을 때의 처리 절), `docs/harness.md`(하네스 구성 표), `.codex` 훅. `docs/harness.md`의 다른 문서 링크는 시작 파일의 `docs/`를 기준으로 합니다 | 5강 |
+| (보강) 하네스 효과 비교 | 하네스 있음 = `after-lesson5`, 하네스 없음 = `ev-booking-start`를 복사해 `AGENTS.md`·`.specify`를 지운 폴더. 같은 부탁 3개로 비교 | 보강 1 |
+| (보강) 권한·샌드박스·되돌리기 | `after-lesson5`에서 앱 권한을 Ask for approval로 바꿔 실습(.codex 보호, Undo, git 커밋) | 보강 2 |
+| [sec15-harness/after-lesson8](sec15-harness/after-lesson8/) | 하네스 점검 후 `docs/harness.md`에 변경 이력 표 추가. guard.sh 개선(복합 읽기 명령 허용)은 섹션 16에서 | 보강 3 |
 
 ## 데이터 출처
 

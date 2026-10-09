@@ -1,0 +1,69 @@
+{
+  "method": "Stop JSON 직접 입력 + 실제 Vitest/tsc 실행. 오류는 임시 Git 복사본에만 주입. 신뢰·Codex 자동 호출: NOT_RUN.",
+  "results": [
+    {
+      "case": "현재 프로젝트 통과",
+      "result": "PASS",
+      "output": {
+        "systemMessage": "Stop 검증 PASS: 규칙 테스트와 타입 검사 통과."
+      },
+      "passed_count": 55
+    },
+    {
+      "case": "환불 120분 경계 실패",
+      "result": "PASS",
+      "output": {
+        "decision": "block",
+        "reason": "Stop 검증 FAIL. 다음 실패를 구현 코드에서 수정하고 테스트와 타입 검사를 다시 실행하세요. tests/의 기대값을 바꾸지 마세요. 해결할 수 없으면 남은 실패와 이유를 보고하세요. 이 훅은 한 번만 수정을 요청합니다.\n\n실패한 테스트:\n- /private/var/folders/_q/lczf4hkn1bs9q5f_l0tbkly00000gn/T/codex-hook-check-ubpzmn8g/project with spaces/tests/rules/refund.test.ts > US-07 — 사용자 취소와 환불 (서울 시연 시각) AC-07-1 / 12:00:00 — 정확히 시작 120분 전에는 3,000원 전액 환불"
+      }
+    },
+    {
+      "case": "실패 후 재진입 true: npm 실행 0회",
+      "result": "PASS",
+      "output": {}
+    },
+    {
+      "case": "다음 응답 false: 다시 검증",
+      "result": "PASS",
+      "output": {
+        "decision": "block",
+        "reason": "Stop 검증 FAIL. 다음 실패를 구현 코드에서 수정하고 테스트와 타입 검사를 다시 실행하세요. tests/의 기대값을 바꾸지 마세요. 해결할 수 없으면 남은 실패와 이유를 보고하세요. 이 훅은 한 번만 수정을 요청합니다.\n\n실패한 테스트:\n- /private/var/folders/_q/lczf4hkn1bs9q5f_l0tbkly00000gn/T/codex-hook-check-ubpzmn8g/project with spaces/tests/rules/refund.test.ts > US-07 — 사용자 취소와 환불 (서울 시연 시각) AC-07-1 / 12:00:00 — 정확히 시작 120분 전에는 3,000원 전액 환불"
+      }
+    },
+    {
+      "case": "타입 검사 실패",
+      "result": "PASS",
+      "output": {
+        "decision": "block",
+        "reason": "Stop 검증 FAIL. 다음 실패를 구현 코드에서 수정하고 테스트와 타입 검사를 다시 실행하세요. tests/의 기대값을 바꾸지 마세요. 해결할 수 없으면 남은 실패와 이유를 보고하세요. 이 훅은 한 번만 수정을 요청합니다.\n\n타입 검사 실패 (종료 코드 1):\n\n> ev-booking@0.0.0 typecheck\n> tsc --noEmit --pretty false\n\nsrc/rules/hook-type-error.ts(1,14): error TS2322: Type 'string' is not assignable to type 'number'."
+      }
+    },
+    {
+      "case": "테스트와 타입 검사 동시 실패",
+      "result": "PASS",
+      "output": {
+        "decision": "block",
+        "reason": "Stop 검증 FAIL. 다음 실패를 구현 코드에서 수정하고 테스트와 타입 검사를 다시 실행하세요. tests/의 기대값을 바꾸지 마세요. 해결할 수 없으면 남은 실패와 이유를 보고하세요. 이 훅은 한 번만 수정을 요청합니다.\n\n실패한 테스트:\n- /private/var/folders/_q/lczf4hkn1bs9q5f_l0tbkly00000gn/T/codex-hook-check-ubpzmn8g/project with spaces/tests/rules/refund.test.ts > US-07 — 사용자 취소와 환불 (서울 시연 시각) AC-07-1 / 12:00:00 — 정확히 시작 120분 전에는 3,000원 전액 환불\n\n타입 검사 실패 (종료 코드 1):\n\n> ev-booking@0.0.0 typecheck\n> tsc --noEmit --pretty false\n\nsrc/rules/hook-type-error.ts(1,14): error TS2322: Type 'string' is not assignable to type 'number'."
+      }
+    },
+    {
+      "case": "오류 제거 후 통과",
+      "result": "PASS",
+      "output": {
+        "systemMessage": "Stop 검증 PASS: 규칙 테스트와 타입 검사 통과."
+      }
+    },
+    {
+      "case": "등록 명령을 하위 폴더에서 실행",
+      "result": "PASS",
+      "output": {
+        "systemMessage": "Stop 검증 PASS: 규칙 테스트와 타입 검사 통과."
+      }
+    },
+    {
+      "case": "기존 추적 파일 및 가드 보존",
+      "result": "PASS",
+      "output": {}
+    }
+  ]
+}
