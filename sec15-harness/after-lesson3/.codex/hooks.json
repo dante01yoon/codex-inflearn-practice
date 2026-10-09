@@ -1,0 +1,18 @@
+{
+  "description": "tests/ 변경과 토스페이먼츠 실제 키를 차단하는 프로젝트 가드",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$(git rev-parse --show-toplevel)/.codex/guard.sh\"",
+            "timeout": 10,
+            "statusMessage": "테스트 파일 보호 및 실제 결제 키 검사"
+          }
+        ]
+      }
+    ]
+  }
+}

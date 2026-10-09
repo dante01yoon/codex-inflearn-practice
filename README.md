@@ -36,6 +36,7 @@ python3 fetch_chargers.py
 |---|---|---|
 | [sec15-harness/ev-booking-start](sec15-harness/ev-booking-start/) | 충전소 예약 서비스 시작 파일(제품 문서·환불/체크인/겹침 규칙·테스트 55개). `npm ci` 후 `npx vitest run` | 2강부터 |
 | [sec15-harness/after-lesson2](sec15-harness/after-lesson2/) | 2강을 마친 AGENTS.md(예약·결제 도메인 규칙 절 추가) | 2강 |
+| [sec15-harness/after-lesson3](sec15-harness/after-lesson3/) | 3강을 마친 `.codex/guard.sh`·`hooks.json`(tests/ 수정과 토스페이먼츠 실제 키 차단 PreToolUse 훅). 시작 파일 폴더에 `.codex`를 복사한 뒤 `git init`하고, 앱 설정 > Hooks에서 Trust를 눌러야 동작합니다. `jq` 필요 | 3강 |
 
 ## 데이터 출처
 
