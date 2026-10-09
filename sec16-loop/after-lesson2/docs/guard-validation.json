@@ -1,0 +1,2092 @@
+{
+  "scope": "direct stdin validation; inspected actions not executed; real switch untouched",
+  "guard": "./.codex/guard.sh",
+  "sha256": "660c875f357eb8590a177112aed90d08360040bab83c5c8a3ecddfb88bc0a1c4",
+  "syntax": "PASS",
+  "real_switch_unchanged": true,
+  "total": 260,
+  "passed": 260,
+  "failed": 0,
+  "cases": [
+    {
+      "mode": "absent",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "test add",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "test update",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "test delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "test move destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "test move source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "test shell write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "Write tool test",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus test write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "external pre separated",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "external pre quoted flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "mixed writes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "read redirect write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "rg external pre",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "background",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "git diff output write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치를 제거하거나 복원할 수 있는 광범위한 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 토스페이먼츠 실제 키가 명령 또는 패치에 포함되어 있습니다. 이 프로젝트에서는 테스트 키만 사용하세요."
+    },
+    {
+      "mode": "absent",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력에 tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령 또는 패치 문자열이 없습니다."
+    },
+    {
+      "mode": "file",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test add",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test update",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test delete",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test move destination",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test move source",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test shell write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test split quotes",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test cwd write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "Write tool test",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus test write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "external pre separated",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "external pre quoted flag",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "mixed writes",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "read redirect write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "rg external pre",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "background",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "file",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "git diff output write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치를 제거하거나 복원할 수 있는 광범위한 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 토스페이먼츠 실제 키가 명령 또는 패치에 포함되어 있습니다. 이 프로젝트에서는 테스트 키만 사용하세요."
+    },
+    {
+      "mode": "file",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "file",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력에 tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "file",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령 또는 패치 문자열이 없습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "test add",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "test update",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "test delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "test move destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "test move source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "test shell write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "Write tool test",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus test write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "external pre separated",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "external pre quoted flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "mixed writes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "read redirect write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "rg external pre",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "background",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "git diff output write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치를 제거하거나 복원할 수 있는 광범위한 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 토스페이먼츠 실제 키가 명령 또는 패치에 포함되어 있습니다. 이 프로젝트에서는 테스트 키만 사용하세요."
+    },
+    {
+      "mode": "directory",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력에 tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령 또는 패치 문자열이 없습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "test add",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "test update",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "test delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "test move destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "test move source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "test shell write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "Write tool test",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 .codex/TEST_WRITING 파일이 있을 때만 허용합니다. 스위치는 사용자가 직접 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus test write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "external pre separated",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "external pre quoted flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "mixed writes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "read redirect write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "rg external pre",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "background",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 스위치 또는 .codex/ 경로를 변경할 수 있는 셸 명령입니다. TEST_WRITING은 사용자만 관리하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치의 상위 경로를 변경할 수 있는 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "git diff output write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 경로에 영향을 줄 수 있는 셸 명령입니다. .codex/TEST_WRITING 없이 쓰기는 금지하며 읽기 명령만 허용합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 프로젝트·스위치를 제거하거나 복원할 수 있는 광범위한 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING 스위치는 사용자만 만들거나 수정·삭제·이동할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 토스페이먼츠 실제 키가 명령 또는 패치에 포함되어 있습니다. 이 프로젝트에서는 테스트 키만 사용하세요."
+    },
+    {
+      "mode": "symlink",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력에 tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령 또는 패치 문자열이 없습니다."
+    }
+  ]
+}
