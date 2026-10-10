@@ -186,6 +186,8 @@ with tempfile.TemporaryDirectory(prefix='sec15-guard-fixtures-') as scratch:
             ('python unprotected rename', shell("python3 -c 'import os; os.rename(\"src/a.ts\", \"src/b.ts\")'"), 0),
             ('sed inplace regex literal config', shell("sed -i '' -e 's/.codex/new/' src/a.ts"), 0),
             ('sed alternate delimiter write', shell("sed -n 's#old#new#w tests/a.ts' src/a.ts"), 0 if enabled else 2),
+            ('quoted redirect is data', shell("printf '%s' '>' tests/a.ts"), 0),
+            ('quoted pipe is data', shell("echo '|' touch tests/a.ts"), 0),
             ('switch add patch', patch('Add File', '.codex/TEST_WRITING', '+fixture\n'), 2),
             ('switch delete patch', patch('Delete File', '.codex/TEST_WRITING'), 2),
             ('switch normalized patch', patch('Update File', 'src/../.codex/TEST_WRITING', '+fixture\n'), 2),

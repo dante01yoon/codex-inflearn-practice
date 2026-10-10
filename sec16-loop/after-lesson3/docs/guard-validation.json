@@ -2,11 +2,11 @@
   "scope": "direct stdin validation; inspected actions not executed; real switch untouched",
   "guard": "~/Documents/codex-lecture/sec15-harness/.codex/guard.sh",
   "sha256": "a65ed80e06d60b53cf9ceea17f29ef69673d29fed8b2d11cccb83220fc8ade8c",
-  "helper_sha256": "141fe01c2493aa99405f3c94b976f9c1af17714a35e97cb5db5b63428577dca5",
+  "helper_sha256": "52cb1ef98b3a8dea2ac34237924dada5ab4f095624b824c292277f853e696ea8",
   "syntax": "PASS",
   "real_switch_unchanged": true,
-  "total": 540,
-  "passed": 540,
+  "total": 548,
+  "passed": 548,
   "failed": 0,
   "cases": [
     {
@@ -191,7 +191,7 @@
       "expected_exit": 2,
       "actual_exit": 2,
       "result": "PASS",
-      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: 닫히지 않은 따옴표"
     },
     {
       "mode": "absent",
@@ -1000,6 +1000,22 @@
       "actual_exit": 2,
       "result": "PASS",
       "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "quoted redirect is data",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted pipe is data",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
     },
     {
       "mode": "absent",
@@ -1271,7 +1287,7 @@
       "expected_exit": 2,
       "actual_exit": 2,
       "result": "PASS",
-      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: 닫히지 않은 따옴표"
     },
     {
       "mode": "file",
@@ -2076,6 +2092,22 @@
     {
       "mode": "file",
       "case": "sed alternate delimiter write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted redirect is data",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted pipe is data",
       "expected_exit": 0,
       "actual_exit": 0,
       "result": "PASS",
@@ -2351,7 +2383,7 @@
       "expected_exit": 2,
       "actual_exit": 2,
       "result": "PASS",
-      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: 닫히지 않은 따옴표"
     },
     {
       "mode": "directory",
@@ -3160,6 +3192,22 @@
       "actual_exit": 2,
       "result": "PASS",
       "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "quoted redirect is data",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted pipe is data",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
     },
     {
       "mode": "directory",
@@ -3431,7 +3479,7 @@
       "expected_exit": 2,
       "actual_exit": 2,
       "result": "PASS",
-      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: 닫히지 않은 따옴표"
     },
     {
       "mode": "symlink",
@@ -4240,6 +4288,22 @@
       "actual_exit": 2,
       "result": "PASS",
       "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted redirect is data",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted pipe is data",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
     },
     {
       "mode": "symlink",

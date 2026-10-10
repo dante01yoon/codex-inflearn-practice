@@ -5,7 +5,6 @@ import json
 import os
 from pathlib import Path
 import re
-import shlex
 import sys
 
 root = os.path.realpath(sys.argv[1])
@@ -231,6 +230,56 @@ def segment(words, cwd):
     return ''
 
 
+def tokenize(command):
+    # Keep word/operator identity: quoted ">" and "|" are data, not shell ops.
+    tokens, word, quote, active, i = [], [], None, False, 0
+    def flush():
+        nonlocal active
+        if active:
+            tokens.append(('word', ''.join(word)))
+            word.clear()
+            active = False
+    while i < len(command):
+        ch = command[i]
+        if ch == '\\' and quote != "'":
+            i += 1
+            if i == len(command):
+                raise ValueError('완성되지 않은 이스케이프')
+            if command[i] != '\n':
+                if quote == '"' and command[i] not in '\\"$`':
+                    word.append('\\')
+                word.append(command[i])
+                active = True
+        elif quote:
+            if ch == quote:
+                quote = None
+            else:
+                word.append(ch)
+        elif ch in "\"'":
+            quote, active = ch, True
+        elif ch == '#' and not active:
+            while i < len(command) and command[i] != '\n':
+                i += 1
+            continue
+        elif ch in ' \t\r':
+            flush()
+        elif ch in ';&|<>()\n':
+            flush()
+            start = i
+            if ch != '\n':
+                while i + 1 < len(command) and command[i + 1] in ';&|<>()':
+                    i += 1
+            tokens.append(('op', command[start:i + 1]))
+        else:
+            word.append(ch)
+            active = True
+        i += 1
+    if quote:
+        raise ValueError('닫히지 않은 따옴표')
+    flush()
+    return tokens
+
+
 def shell_reason(command, cwd, depth=0):
     if depth > 20:
         return '차단: 명령 치환 중첩을 분석할 수 없습니다.'
@@ -239,18 +288,19 @@ def shell_reason(command, cwd, depth=0):
         reason = shell_reason(body, cwd, depth + 1)
         if reason:
             return reason
-    lexer = shlex.shlex(cleaned, posix=True, punctuation_chars=';&|<>()\n')
-    lexer.whitespace = ' \t\r'
-    lexer.whitespace_split = True
-    tokens = list(lexer)
+    tokens = tokenize(cleaned)
     words, i = [], 0
     while i < len(tokens):
-        token = tokens[i]
-        if token in {'>', '>>', '>|', '>&', '&>'}:
+        kind, token = tokens[i]
+        if kind == 'word':
+            words.append(token)
+        elif token in {'>', '>>', '>|', '>&', '&>'}:
             i += 1
             if i == len(tokens):
                 return '차단: 리다이렉션 대상이 없습니다.'
-            target = tokens[i]
+            target_kind, target = tokens[i]
+            if target_kind != 'word':
+                return '차단: 리다이렉션 대상이 잘못되었습니다.'
             if not (token == '>&' and (target.isdigit() or target == '-')) and protected(target, cwd):
                 return '차단: 보호 경로에 쓰는 리다이렉션입니다.'
         elif token in {'<', '<<', '<<<', '<&'}:
