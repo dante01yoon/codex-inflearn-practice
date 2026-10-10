@@ -42,6 +42,7 @@ python3 fetch_chargers.py
 | (보강) 하네스 효과 비교 | 하네스 있음 = `after-lesson5`, 하네스 없음 = `ev-booking-start`를 복사해 `AGENTS.md`·`.specify`를 지운 폴더. 같은 부탁 3개로 비교 | 보강 1 |
 | (보강) 권한·샌드박스·되돌리기 | `after-lesson5`에서 앱 권한을 Ask for approval로 바꿔 실습(.codex 보호, Undo, git 커밋) | 보강 2 |
 | [sec15-harness/after-lesson8](sec15-harness/after-lesson8/) | 하네스 점검 후 `docs/harness.md`에 변경 이력 표 추가. guard.sh 개선(복합 읽기 명령 허용)은 섹션 16에서 | 보강 3 |
+| [sec15-harness/visual-demo](sec15-harness/visual-demo/) | 하네스 있음·없음 폴더에 같은 시연 화면(환불 표·테스트 결과·tests 변경 여부)을 띄우고 같은 부탁의 결과를 화면으로 비교 | 보강 4 |
 
 ## 섹션 16. 루프 엔지니어링
 
