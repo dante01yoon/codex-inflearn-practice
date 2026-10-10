@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+coverage/
+.vitest/
+*.log
+logs/
+.env*
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+.local/
+.playwright-mcp/

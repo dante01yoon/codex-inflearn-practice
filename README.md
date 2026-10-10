@@ -50,6 +50,7 @@ python3 fetch_chargers.py
 | [sec16-loop/after-lesson2](sec16-loop/after-lesson2/) | 결제 승인·웹훅 테스트 40개(레드)를 고정한 상태. `.codex/guard.sh`에 테스트 작성 스위치(`.codex/TEST_WRITING`, 사람이 직접 만들고 지움) 추가 | 2강 |
 | [sec16-loop/after-lesson3](sec16-loop/after-lesson3/) | AGENTS.md 멈춤 규칙(위험 차단 vs 아직 덜 끝남) 구분, `scripts/loop.sh`(최대 5바퀴·20분·같은 테스트 3바퀴 연속 실패·tests/ 변경 시 중단, `codex exec`로 수정), 가드를 위험 목록 방식으로 변경(`.codex/guard-command.py`), 루프로 구현한 `src/rules/payment.ts`. 실행: `bash scripts/loop.sh` (Codex CLI 로그인 필요) | 3강 |
 | [sec16-loop/after-lesson4](sec16-loop/after-lesson4/) | 노쇼 자동 취소·대기자 승계 테스트 19개(정확히 10분 만료 정책 반영)와 루프로 구현한 `src/rules/no-show-succession.ts`(전체 114개 통과). 뼈대만 남긴 22줄 루프 `scripts/loop-mini.sh`(설명용) 추가 | 4강 |
+| [sec16-loop/after-lesson5](sec16-loop/after-lesson5/) | 브라우저 시연 화면(지도·예약·토스페이먼츠 테스트 결제창·시연용 가짜 승인·노쇼·대기자 승계). `.env`에 토스 문서용 테스트 키를 적고 `npm run dev` → http://localhost:4173 (Node 24). 지도 데이터는 서울 300곳 샘플 `data/ev-small` | 5강 |
 
 ## 데이터 출처
 
