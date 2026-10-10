@@ -43,6 +43,13 @@ python3 fetch_chargers.py
 | (보강) 권한·샌드박스·되돌리기 | `after-lesson5`에서 앱 권한을 Ask for approval로 바꿔 실습(.codex 보호, Undo, git 커밋) | 보강 2 |
 | [sec15-harness/after-lesson8](sec15-harness/after-lesson8/) | 하네스 점검 후 `docs/harness.md`에 변경 이력 표 추가. guard.sh 개선(복합 읽기 명령 허용)은 섹션 16에서 | 보강 3 |
 
+## 섹션 16. 루프 엔지니어링
+
+| 폴더 | 내용 | 수업 |
+|---|---|---|
+| [sec16-loop/after-lesson2](sec16-loop/after-lesson2/) | 결제 승인·웹훅 테스트 40개(레드)를 고정한 상태. `.codex/guard.sh`에 테스트 작성 스위치(`.codex/TEST_WRITING`, 사람이 직접 만들고 지움) 추가 | 2강 |
+| [sec16-loop/after-lesson3](sec16-loop/after-lesson3/) | AGENTS.md 멈춤 규칙(위험 차단 vs 아직 덜 끝남) 구분, `scripts/loop.sh`(최대 5바퀴·20분·같은 테스트 3바퀴 연속 실패·tests/ 변경 시 중단, `codex exec`로 수정), 가드를 위험 목록 방식으로 변경(`.codex/guard-command.py`), 루프로 구현한 `src/rules/payment.ts`. 실행: `bash scripts/loop.sh` (Codex CLI 로그인 필요) | 3강 |
+
 ## 데이터 출처
 
 `data/*.json`은 공공데이터포털 「한국환경공단_전기자동차 충전소 정보」(https://www.data.go.kr/data/15076352/openapi.do)에서 2026-10-08에 조회한 일부입니다. 이용허락범위: 공공저작물 출처표시(제1유형). 지도 바탕은 © OpenStreetMap 기여자.

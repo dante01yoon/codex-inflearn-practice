@@ -1,0 +1,4333 @@
+{
+  "scope": "direct stdin validation; inspected actions not executed; real switch untouched",
+  "guard": "~/Documents/codex-lecture/sec15-harness/.codex/guard.sh",
+  "sha256": "a65ed80e06d60b53cf9ceea17f29ef69673d29fed8b2d11cccb83220fc8ade8c",
+  "helper_sha256": "141fe01c2493aa99405f3c94b976f9c1af17714a35e97cb5db5b63428577dca5",
+  "syntax": "PASS",
+  "real_switch_unchanged": true,
+  "total": 540,
+  "passed": 540,
+  "failed": 0,
+  "cases": [
+    {
+      "mode": "absent",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "test add",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test update",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test move destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test move source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test shell write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "Write tool test",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus test write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+    },
+    {
+      "mode": "absent",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 완성되지 않은 복합 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "external pre separated",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "external pre quoted flag",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "mixed writes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "read redirect write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "rg external pre",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "background",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed numeric read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed marker read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed absolute read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed last line read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed multiple prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed newline prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed regex read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed regex operator read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed regex escaped slash",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed regex range",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed combined flags",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed multiple expressions",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed joined expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed long expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed option terminator",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed read from stdin",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed read in config cwd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed test read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "read marker in echo",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "read marker in printf",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "loop blocked read reproduction",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed in place",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed in place GNU",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed in place long",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed write command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed write second expression",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed substitution write flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed execute command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed substitution execute flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed external program",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed expression after file",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed redirect marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed mixed marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed command substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed actual config append",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed config delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sed config chmod",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "git diff output write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "sort pipeline regression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sort pipeline config read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "unlisted reader",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "awk read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "python read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed stdout substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "input redirect",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "output unprotected",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "copy test as source",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "git stage config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "git stage tests",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "test delete shell",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test move shell",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test copy destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test sed in place",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test sed write stdout",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test redirect append",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test tee",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test sort output",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "test dd output",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "read substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "move target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "copy target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "config target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "python literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "python open write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "python config write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "node literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "awk literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "copy test source target first",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "python unprotected rename",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed inplace regex literal config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "sed alternate delimiter write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 실제 결제 키는 사용할 수 없습니다."
+    },
+    {
+      "mode": "absent",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "absent",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "absent",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령·패치 문자열이 없습니다."
+    },
+    {
+      "mode": "file",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test add",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test update",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test delete",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test move destination",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test move source",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test shell write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test split quotes",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test cwd write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "Write tool test",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus test write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+    },
+    {
+      "mode": "file",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 완성되지 않은 복합 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "external pre separated",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "external pre quoted flag",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "mixed writes",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "read redirect write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "rg external pre",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "background",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed numeric read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed marker read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed absolute read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed last line read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed multiple prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed newline prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed regex read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed regex operator read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed regex escaped slash",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed regex range",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed combined flags",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed multiple expressions",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed joined expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed long expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed option terminator",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed read from stdin",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed read in config cwd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed test read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "read marker in echo",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "read marker in printf",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "loop blocked read reproduction",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed in place",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed in place GNU",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed in place long",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed write command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed write second expression",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed substitution write flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed execute command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed substitution execute flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed external program",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed expression after file",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed redirect marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed mixed marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed command substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed actual config append",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed config delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sed config chmod",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "git diff output write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "sort pipeline regression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sort pipeline config read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "unlisted reader",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "awk read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "python read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed stdout substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "input redirect",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "output unprotected",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "copy test as source",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "git stage config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "git stage tests",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test delete shell",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test move shell",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test copy destination",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test sed in place",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test sed write stdout",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test redirect append",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test tee",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test sort output",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "test dd output",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "read substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "move target option",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "copy target option",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "config target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "python literal write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "python open write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "python config write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "file",
+      "case": "node literal write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "awk literal write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "copy test source target first",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "python unprotected rename",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed inplace regex literal config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "sed alternate delimiter write",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "file",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 실제 결제 키는 사용할 수 없습니다."
+    },
+    {
+      "mode": "file",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "file",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "file",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "file",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령·패치 문자열이 없습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "test add",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test update",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test move destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test move source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test shell write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "Write tool test",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus test write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+    },
+    {
+      "mode": "directory",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 완성되지 않은 복합 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "external pre separated",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "external pre quoted flag",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "mixed writes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "read redirect write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "rg external pre",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "background",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed numeric read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed marker read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed absolute read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed last line read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed multiple prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed newline prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed regex read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed regex operator read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed regex escaped slash",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed regex range",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed combined flags",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed multiple expressions",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed joined expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed long expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed option terminator",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed read from stdin",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed read in config cwd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed test read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "read marker in echo",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "read marker in printf",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "loop blocked read reproduction",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed in place",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed in place GNU",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed in place long",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed write command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed write second expression",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed substitution write flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed execute command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed substitution execute flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed external program",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed expression after file",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed redirect marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed mixed marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed command substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed actual config append",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed config delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sed config chmod",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "git diff output write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "sort pipeline regression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sort pipeline config read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "unlisted reader",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "awk read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "python read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed stdout substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "input redirect",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "output unprotected",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "copy test as source",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "git stage config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "git stage tests",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "test delete shell",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test move shell",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test copy destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test sed in place",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test sed write stdout",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test redirect append",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test tee",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test sort output",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "test dd output",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "read substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "move target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "copy target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "config target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "python literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "python open write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "python config write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "node literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "awk literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "copy test source target first",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "python unprotected rename",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed inplace regex literal config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "sed alternate delimiter write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 실제 결제 키는 사용할 수 없습니다."
+    },
+    {
+      "mode": "directory",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "directory",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "directory",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령·패치 문자열이 없습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "source patch",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "test add",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test update",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test move destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test move source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test shell write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "Write tool test",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tests/ 변경은 사용자 테스트 작성 스위치가 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "double quoted regex pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted operators",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted pipe word",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "escaped literal pipe",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus pipeline",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus test write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "quoted regex plus redirect",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "double quoted substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "double quoted backticks",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "escaped quote then real write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "unterminated marker quote",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 입력·명령 구문을 분석할 수 없습니다: No closing quotation"
+    },
+    {
+      "mode": "symlink",
+      "case": "trailing pipe marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 완성되지 않은 복합 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "external pre separated",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "external pre quoted flag",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "single read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "semicolon reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "AND reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "OR reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "pipe reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "newline reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "mixed writes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "read redirect write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "rg external pre",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "background",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed numeric read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed marker read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed absolute read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed last line read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed multiple prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed newline prints",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed regex read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed regex operator read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed regex escaped slash",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed regex range",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed combined flags",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed multiple expressions",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed joined expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed long expression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed option terminator",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed read from stdin",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed read in config cwd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed test read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "read marker in echo",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "read marker in printf",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "loop blocked read reproduction",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed in place",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed in place GNU",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed in place long",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed write command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed write second expression",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed substitution write flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed execute command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed substitution execute flag",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed external program",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed expression after file",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed redirect marker",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed mixed marker write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed command substitution",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed actual config append",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed config delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sed config chmod",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch create",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch overwrite",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch rename source",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch rename destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch quoted",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch split quotes",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch cwd write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch parent rename",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "absolute project delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "absolute parent delete",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "safe git diff reads",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "git diff output write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "git clean",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "sort pipeline regression",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sort pipeline config read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "unlisted reader",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "awk read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "python read",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed stdout substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "input redirect",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "output unprotected",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "copy test as source",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "git stage config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "git stage tests",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "test delete shell",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test move shell",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test copy destination",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test sed in place",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test sed write stdout",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test redirect append",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로에 쓰는 리다이렉션입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test tee",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test sort output",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "test dd output",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "read substitution",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "move target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "copy target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "config target option",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "python literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "python open write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "python config write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "node literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "awk literal write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "copy test source target first",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "python unprotected rename",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed inplace regex literal config",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "sed alternate delimiter write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 보호 경로의 파일 쓰기·삭제·이동·메타데이터 변경 명령입니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch add patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch delete patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch normalized patch",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch patch move",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch Write",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "switch Edit",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: TEST_WRITING은 사용자만 변경할 수 있습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "fake live key",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 실제 결제 키는 사용할 수 없습니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "fake test key",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "reason": ""
+    },
+    {
+      "mode": "symlink",
+      "case": "invalid input",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 훅 입력은 하나의 JSON 객체여야 합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "missing tool name",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: tool_name 문자열이 필요합니다."
+    },
+    {
+      "mode": "symlink",
+      "case": "missing command",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "result": "PASS",
+      "reason": "차단: 검사할 명령·패치 문자열이 없습니다."
+    }
+  ]
+}

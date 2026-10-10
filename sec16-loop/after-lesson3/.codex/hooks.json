@@ -1,0 +1,30 @@
+{
+  "description": "프로젝트 가드와 완료 전 테스트·타입 검사 (실패 시 한 번만 계속 수정)",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$(git rev-parse --show-toplevel)/.codex/guard.sh\"",
+            "timeout": 10,
+            "statusMessage": "테스트 파일 보호 및 실제 결제 키 검사"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$(git rev-parse --show-toplevel)/.codex/verify.sh\"",
+            "timeout": 120,
+            "statusMessage": "완료 전 규칙 테스트 및 타입 검사"
+          }
+        ]
+      }
+    ]
+  }
+}
