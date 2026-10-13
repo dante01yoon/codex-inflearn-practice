@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issues"],
+  "properties": {
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["number", "type", "reason", "evidence", "question"],
+        "properties": {
+          "number": { "type": "integer" },
+          "type": { "type": "string", "enum": ["fix", "spec", "need-info", "human"] },
+          "reason": { "type": "string" },
+          "evidence": { "type": "string" },
+          "question": { "type": "string" }
+        }
+      }
+    }
+  }
+}

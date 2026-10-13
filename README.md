@@ -53,6 +53,12 @@ python3 fetch_chargers.py
 | [sec16-loop/after-lesson4](sec16-loop/after-lesson4/) | 노쇼 자동 취소·대기자 승계 테스트 19개(정확히 10분 만료 정책 반영)와 루프로 구현한 `src/rules/no-show-succession.ts`(전체 114개 통과). 뼈대만 남긴 22줄 루프 `scripts/loop-mini.sh`(설명용) 추가 | 4강 |
 | [sec16-loop/after-lesson5](sec16-loop/after-lesson5/) | 브라우저 시연 화면(지도·예약·토스페이먼츠 테스트 결제창·시연용 가짜 승인·노쇼·대기자 승계). `.env`에 토스 문서용 테스트 키를 적고 `npm run dev` → http://localhost:4173 (Node 24). 지도 데이터는 서울 300곳 샘플 `data/ev-small` | 5강 |
 
+## 보너스. 소프트웨어 팩토리
+
+| 폴더 | 내용 | 수업 |
+|---|---|---|
+| [bonus-factory](bonus-factory/) | 섹션 16 앱 위에 쌓는 팩토리 라인: `scripts/factory.sh`(분류 → 재현 테스트 → 수정 → 리뷰 → 전후 화면 → PR), 공정 스킬 5개, AGENTS.md 분류 표. 실제 이슈·PR이 있는 전체 저장소는 https://github.com/dante01yoon/ev-booking-factory | 보너스 1강 |
+
 ## 데이터 출처
 
 `data/*.json`은 공공데이터포털 「한국환경공단_전기자동차 충전소 정보」(https://www.data.go.kr/data/15076352/openapi.do)에서 2026-10-08에 조회한 일부입니다. 이용허락범위: 공공저작물 출처표시(제1유형). 지도 바탕은 © OpenStreetMap 기여자.
