@@ -1,0 +1,2 @@
+smlibpy==0.3.3
+cadquery==2.8.0

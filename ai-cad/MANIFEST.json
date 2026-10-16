@@ -1,0 +1,877 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 36,
+    "sha256": "f8d6fc5b1fc7ae047e42c6920bfdb6e3773adda4177c12e927be06e9f4d01d5a"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5110,
+    "sha256": "f21abdc0496d9c3edcdd59fad86e2baa5ece20aec519939b7c087205f57efbdb"
+  },
+  {
+    "path": "lesson-01/ASSIGNMENTS.md",
+    "bytes": 278,
+    "sha256": "7c2d95fc89fd661a0f33e5951f832cd3729db6b956bbf4ec5a98d9bfa1846c24"
+  },
+  {
+    "path": "lesson-01/CHECKLIST.md",
+    "bytes": 247,
+    "sha256": "0675ef33693cb07f1c313d67eb2dd43588e8955fa4ea0453bb15cce8f9a2ec9f"
+  },
+  {
+    "path": "lesson-01/PROMPTS.md",
+    "bytes": 1660,
+    "sha256": "6350e25f6cd8446262ff211fb52cb89879a337a1f47503010e6fe600fd89c83a"
+  },
+  {
+    "path": "lesson-01/SOLUTIONS.md",
+    "bytes": 372,
+    "sha256": "9d26d5571ec2e29a1e16efe2a0be5e321f0a4773c7326c7f9fc7b31bf2653f5a"
+  },
+  {
+    "path": "lesson-01/TUTORIAL.md",
+    "bytes": 4375,
+    "sha256": "b7d5366cbf9b3d5b4880dad49a6e9567c8f7c726f16b3f6e9bddd11ed0662b03"
+  },
+  {
+    "path": "lesson-01/result/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-01/result/README.md",
+    "bytes": 108,
+    "sha256": "f40ac84580c24283170ea0f5ef58c4aabbe6de62e1f679bbc08ff9ab2160b2e5"
+  },
+  {
+    "path": "lesson-01/result/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-01/result/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-01/result/model.py",
+    "bytes": 2041,
+    "sha256": "a439a1b0908fc59df01b5d959bf7eba289eb50169b474b45f428a4250bfe407e"
+  },
+  {
+    "path": "lesson-01/result/outputs/before/organizer.step",
+    "bytes": 35056,
+    "sha256": "a9792411927d7a5e58282dab13d200afb8106435372b95d4c2f90f4c79d70832"
+  },
+  {
+    "path": "lesson-01/result/outputs/before/organizer.stl",
+    "bytes": 46684,
+    "sha256": "eb0ad0ec9f40997826fbf4a5f033a0d6801d735716f5c1689246aad74eefdc6c"
+  },
+  {
+    "path": "lesson-01/result/outputs/before/preview.png",
+    "bytes": 19189,
+    "sha256": "f51922e17007ef0905538d08b80705087b70db0110af596de7b092559fc06aab"
+  },
+  {
+    "path": "lesson-01/result/outputs/before/verified.json",
+    "bytes": 560,
+    "sha256": "691a9f61e199a7862ced82a3926ba37183f0bc27bc2bee18affeba0c69d7f1e5"
+  },
+  {
+    "path": "lesson-01/result/outputs/before/viewer.html",
+    "bytes": 143589,
+    "sha256": "bb12cbfa8b7985b7cbf5f70d71ac165eb055149f1ae1b81358cc5810f269fc13"
+  },
+  {
+    "path": "lesson-01/result/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-01/result/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-01/result/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-01/solutions/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-01/solutions/README.md",
+    "bytes": 111,
+    "sha256": "d20fa01588a51bf09cc6a930b6e93efde48ec8d9fc581b93e02d62aecda1e66b"
+  },
+  {
+    "path": "lesson-01/solutions/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-01/solutions/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-01/solutions/model.py",
+    "bytes": 2041,
+    "sha256": "a439a1b0908fc59df01b5d959bf7eba289eb50169b474b45f428a4250bfe407e"
+  },
+  {
+    "path": "lesson-01/solutions/outputs/before/organizer.step",
+    "bytes": 35056,
+    "sha256": "a9792411927d7a5e58282dab13d200afb8106435372b95d4c2f90f4c79d70832"
+  },
+  {
+    "path": "lesson-01/solutions/outputs/before/organizer.stl",
+    "bytes": 46684,
+    "sha256": "eb0ad0ec9f40997826fbf4a5f033a0d6801d735716f5c1689246aad74eefdc6c"
+  },
+  {
+    "path": "lesson-01/solutions/outputs/before/preview.png",
+    "bytes": 19189,
+    "sha256": "f51922e17007ef0905538d08b80705087b70db0110af596de7b092559fc06aab"
+  },
+  {
+    "path": "lesson-01/solutions/outputs/before/verified.json",
+    "bytes": 560,
+    "sha256": "691a9f61e199a7862ced82a3926ba37183f0bc27bc2bee18affeba0c69d7f1e5"
+  },
+  {
+    "path": "lesson-01/solutions/outputs/before/viewer.html",
+    "bytes": 143589,
+    "sha256": "bb12cbfa8b7985b7cbf5f70d71ac165eb055149f1ae1b81358cc5810f269fc13"
+  },
+  {
+    "path": "lesson-01/solutions/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-01/solutions/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-01/solutions/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-01/start/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-01/start/PROMPTS.md",
+    "bytes": 1660,
+    "sha256": "6350e25f6cd8446262ff211fb52cb89879a337a1f47503010e6fe600fd89c83a"
+  },
+  {
+    "path": "lesson-01/start/README.md",
+    "bytes": 107,
+    "sha256": "659c9eeccdcf24244b211df0f6d98f7a4d4ca66790169a60567300b227111271"
+  },
+  {
+    "path": "lesson-01/start/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-01/start/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-01/start/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-01/start/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-01/start/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-02/ASSIGNMENTS.md",
+    "bytes": 291,
+    "sha256": "0fc5843f4880541363e2dbc065fc79db1f16064374bbd378d747bb0a34760de6"
+  },
+  {
+    "path": "lesson-02/CHECKLIST.md",
+    "bytes": 247,
+    "sha256": "0675ef33693cb07f1c313d67eb2dd43588e8955fa4ea0453bb15cce8f9a2ec9f"
+  },
+  {
+    "path": "lesson-02/PROMPTS.md",
+    "bytes": 1225,
+    "sha256": "8556e9a5a04320b1cabd5a859cad1db27a1c2f68f35a3de4e50c0ffcee55c629"
+  },
+  {
+    "path": "lesson-02/SOLUTIONS.md",
+    "bytes": 379,
+    "sha256": "38ddea7f83f08e25bcf9c3d8ec746c75c15fc07cb0ff838c394a392a5da031d9"
+  },
+  {
+    "path": "lesson-02/TUTORIAL.md",
+    "bytes": 3240,
+    "sha256": "ba0560b5da051b14157430152abf80ff0d2cd9a511285e8ce3a3f875990ece50"
+  },
+  {
+    "path": "lesson-02/result/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-02/result/README.md",
+    "bytes": 124,
+    "sha256": "e9546d348c93aac6dcab02ea174d98024891fc01eba8baad2890a76cbdb065f8"
+  },
+  {
+    "path": "lesson-02/result/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-02/result/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-02/result/model.py",
+    "bytes": 2041,
+    "sha256": "a439a1b0908fc59df01b5d959bf7eba289eb50169b474b45f428a4250bfe407e"
+  },
+  {
+    "path": "lesson-02/result/outputs/after/comparison.json",
+    "bytes": 1722,
+    "sha256": "429f539268af08bf01db0ef5d37144b9d5e4efb1d7ae2d23a41f8e1278a95392"
+  },
+  {
+    "path": "lesson-02/result/outputs/after/organizer.step",
+    "bytes": 34264,
+    "sha256": "39eb20b9cefa60acef54b08cf72fd3e0cc654a0402d832b45f11e93e956ca0dd"
+  },
+  {
+    "path": "lesson-02/result/outputs/after/organizer.stl",
+    "bytes": 46684,
+    "sha256": "8c2668ae3fe4a8a370c59512395636682c5c93cebf54a6be30fe2706d2391bf3"
+  },
+  {
+    "path": "lesson-02/result/outputs/after/preview.png",
+    "bytes": 20298,
+    "sha256": "baae3cad943028c2756f5e4a0aad70919bfe6780530e9b8a147ce8940f6ecf23"
+  },
+  {
+    "path": "lesson-02/result/outputs/after/verified.json",
+    "bytes": 561,
+    "sha256": "3ec358f9ddb04c5aaa878793e832c40cd5b2525aa5efa767a88f83de566c22ec"
+  },
+  {
+    "path": "lesson-02/result/outputs/after/viewer.html",
+    "bytes": 143625,
+    "sha256": "6070b691797c8f1a552c0658760f7d1cde51be28907f1f8fae06fa56bddcb550"
+  },
+  {
+    "path": "lesson-02/result/outputs/before/organizer.step",
+    "bytes": 35056,
+    "sha256": "a9792411927d7a5e58282dab13d200afb8106435372b95d4c2f90f4c79d70832"
+  },
+  {
+    "path": "lesson-02/result/outputs/before/organizer.stl",
+    "bytes": 46684,
+    "sha256": "eb0ad0ec9f40997826fbf4a5f033a0d6801d735716f5c1689246aad74eefdc6c"
+  },
+  {
+    "path": "lesson-02/result/outputs/before/preview.png",
+    "bytes": 19189,
+    "sha256": "f51922e17007ef0905538d08b80705087b70db0110af596de7b092559fc06aab"
+  },
+  {
+    "path": "lesson-02/result/outputs/before/verified.json",
+    "bytes": 560,
+    "sha256": "691a9f61e199a7862ced82a3926ba37183f0bc27bc2bee18affeba0c69d7f1e5"
+  },
+  {
+    "path": "lesson-02/result/outputs/before/viewer.html",
+    "bytes": 143589,
+    "sha256": "bb12cbfa8b7985b7cbf5f70d71ac165eb055149f1ae1b81358cc5810f269fc13"
+  },
+  {
+    "path": "lesson-02/result/outputs/exercise/inspection.json",
+    "bytes": 238,
+    "sha256": "d0ab09e995fc5a5cedba54d023d4aba437a3027ad2bfd1a06fb1ec010bb84157"
+  },
+  {
+    "path": "lesson-02/result/outputs/exercise/organizer.step",
+    "bytes": 33739,
+    "sha256": "a0406170f7e0a98d7ba3a674f52e1d6a2bcbcb1f66eca2b087c2bf07fec6bf09"
+  },
+  {
+    "path": "lesson-02/result/outputs/exercise/organizer.stl",
+    "bytes": 46684,
+    "sha256": "b1c3bf2dac89caea9bf2c0993f966a8c7aac9253c5749dabd43d04d71b142104"
+  },
+  {
+    "path": "lesson-02/result/outputs/exercise/preview.png",
+    "bytes": 19282,
+    "sha256": "67933c9a797c69bcd6f2d6e1f6d2fbd913a95165505ce32c2b2070e22e5b70e3"
+  },
+  {
+    "path": "lesson-02/result/outputs/exercise/verified.json",
+    "bytes": 546,
+    "sha256": "0760563609cbaa779fbf9db13785f2038449fe374605d1345f3afee24ab5ab33"
+  },
+  {
+    "path": "lesson-02/result/outputs/exercise/viewer.html",
+    "bytes": 143594,
+    "sha256": "54a9f4017089fb6223396c88eb877c4235834430feda4e7dce7f8b0780f6d95e"
+  },
+  {
+    "path": "lesson-02/result/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-02/result/run_after.py",
+    "bytes": 3759,
+    "sha256": "707ee8d5a5be58aac0f2c97184981951d213ec62b8a13707f384d2f6a6a63e1e"
+  },
+  {
+    "path": "lesson-02/result/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-02/result/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-02/solutions/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-02/solutions/README.md",
+    "bytes": 127,
+    "sha256": "bd25bf0534fad4a4a67ad63ea4e32c0d0db12bbcc9417331edf7ba9870de310c"
+  },
+  {
+    "path": "lesson-02/solutions/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-02/solutions/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-02/solutions/model.py",
+    "bytes": 2041,
+    "sha256": "a439a1b0908fc59df01b5d959bf7eba289eb50169b474b45f428a4250bfe407e"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/after/comparison.json",
+    "bytes": 1722,
+    "sha256": "429f539268af08bf01db0ef5d37144b9d5e4efb1d7ae2d23a41f8e1278a95392"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/after/organizer.step",
+    "bytes": 34264,
+    "sha256": "39eb20b9cefa60acef54b08cf72fd3e0cc654a0402d832b45f11e93e956ca0dd"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/after/organizer.stl",
+    "bytes": 46684,
+    "sha256": "8c2668ae3fe4a8a370c59512395636682c5c93cebf54a6be30fe2706d2391bf3"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/after/preview.png",
+    "bytes": 20298,
+    "sha256": "baae3cad943028c2756f5e4a0aad70919bfe6780530e9b8a147ce8940f6ecf23"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/after/verified.json",
+    "bytes": 561,
+    "sha256": "3ec358f9ddb04c5aaa878793e832c40cd5b2525aa5efa767a88f83de566c22ec"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/after/viewer.html",
+    "bytes": 143625,
+    "sha256": "6070b691797c8f1a552c0658760f7d1cde51be28907f1f8fae06fa56bddcb550"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/before/organizer.step",
+    "bytes": 35056,
+    "sha256": "a9792411927d7a5e58282dab13d200afb8106435372b95d4c2f90f4c79d70832"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/before/organizer.stl",
+    "bytes": 46684,
+    "sha256": "eb0ad0ec9f40997826fbf4a5f033a0d6801d735716f5c1689246aad74eefdc6c"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/before/preview.png",
+    "bytes": 19189,
+    "sha256": "f51922e17007ef0905538d08b80705087b70db0110af596de7b092559fc06aab"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/before/verified.json",
+    "bytes": 560,
+    "sha256": "691a9f61e199a7862ced82a3926ba37183f0bc27bc2bee18affeba0c69d7f1e5"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/before/viewer.html",
+    "bytes": 143589,
+    "sha256": "bb12cbfa8b7985b7cbf5f70d71ac165eb055149f1ae1b81358cc5810f269fc13"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/exercise/inspection.json",
+    "bytes": 238,
+    "sha256": "d0ab09e995fc5a5cedba54d023d4aba437a3027ad2bfd1a06fb1ec010bb84157"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/exercise/organizer.step",
+    "bytes": 33739,
+    "sha256": "a0406170f7e0a98d7ba3a674f52e1d6a2bcbcb1f66eca2b087c2bf07fec6bf09"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/exercise/organizer.stl",
+    "bytes": 46684,
+    "sha256": "b1c3bf2dac89caea9bf2c0993f966a8c7aac9253c5749dabd43d04d71b142104"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/exercise/preview.png",
+    "bytes": 19282,
+    "sha256": "67933c9a797c69bcd6f2d6e1f6d2fbd913a95165505ce32c2b2070e22e5b70e3"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/exercise/verified.json",
+    "bytes": 546,
+    "sha256": "0760563609cbaa779fbf9db13785f2038449fe374605d1345f3afee24ab5ab33"
+  },
+  {
+    "path": "lesson-02/solutions/outputs/exercise/viewer.html",
+    "bytes": 143594,
+    "sha256": "54a9f4017089fb6223396c88eb877c4235834430feda4e7dce7f8b0780f6d95e"
+  },
+  {
+    "path": "lesson-02/solutions/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-02/solutions/run_after.py",
+    "bytes": 3759,
+    "sha256": "707ee8d5a5be58aac0f2c97184981951d213ec62b8a13707f384d2f6a6a63e1e"
+  },
+  {
+    "path": "lesson-02/solutions/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-02/solutions/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-02/start/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-02/start/PROMPTS.md",
+    "bytes": 1225,
+    "sha256": "8556e9a5a04320b1cabd5a859cad1db27a1c2f68f35a3de4e50c0ffcee55c629"
+  },
+  {
+    "path": "lesson-02/start/README.md",
+    "bytes": 123,
+    "sha256": "ffae7932f2b97f8340b777c9ddad8b96225eb86c48ae5f1647e1ee512f16af5c"
+  },
+  {
+    "path": "lesson-02/start/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-02/start/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-02/start/model.py",
+    "bytes": 2041,
+    "sha256": "a439a1b0908fc59df01b5d959bf7eba289eb50169b474b45f428a4250bfe407e"
+  },
+  {
+    "path": "lesson-02/start/outputs/before/organizer.step",
+    "bytes": 35056,
+    "sha256": "a9792411927d7a5e58282dab13d200afb8106435372b95d4c2f90f4c79d70832"
+  },
+  {
+    "path": "lesson-02/start/outputs/before/organizer.stl",
+    "bytes": 46684,
+    "sha256": "eb0ad0ec9f40997826fbf4a5f033a0d6801d735716f5c1689246aad74eefdc6c"
+  },
+  {
+    "path": "lesson-02/start/outputs/before/preview.png",
+    "bytes": 19189,
+    "sha256": "f51922e17007ef0905538d08b80705087b70db0110af596de7b092559fc06aab"
+  },
+  {
+    "path": "lesson-02/start/outputs/before/verified.json",
+    "bytes": 560,
+    "sha256": "691a9f61e199a7862ced82a3926ba37183f0bc27bc2bee18affeba0c69d7f1e5"
+  },
+  {
+    "path": "lesson-02/start/outputs/before/viewer.html",
+    "bytes": 143589,
+    "sha256": "bb12cbfa8b7985b7cbf5f70d71ac165eb055149f1ae1b81358cc5810f269fc13"
+  },
+  {
+    "path": "lesson-02/start/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-02/start/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-02/start/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-03/ASSIGNMENTS.md",
+    "bytes": 265,
+    "sha256": "96de016203f1696b5c5b320beedc85079c79a833c2f9b8f9396ed58095259cfb"
+  },
+  {
+    "path": "lesson-03/CHECKLIST.md",
+    "bytes": 247,
+    "sha256": "0675ef33693cb07f1c313d67eb2dd43588e8955fa4ea0453bb15cce8f9a2ec9f"
+  },
+  {
+    "path": "lesson-03/PROMPTS.md",
+    "bytes": 1417,
+    "sha256": "23d8021ddce04878d75cfa28472f173f9d16e01083dd23d8c8e9ca8334759381"
+  },
+  {
+    "path": "lesson-03/SOLUTIONS.md",
+    "bytes": 384,
+    "sha256": "b8926b965105c64d594c6d2a53cf62bbfdfc28342d286f5f3f5911ea0d4aca42"
+  },
+  {
+    "path": "lesson-03/TUTORIAL.md",
+    "bytes": 3741,
+    "sha256": "9e5ebfe07b6ca83b423979569349cdae16df100fb5b2861bbb157e1192aeb456"
+  },
+  {
+    "path": "lesson-03/result/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-03/result/README.md",
+    "bytes": 123,
+    "sha256": "d70de6f85a5d412210597da2f08f5102a4f5c9a56da58788e911834f1822495b"
+  },
+  {
+    "path": "lesson-03/result/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-03/result/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-03/result/model.py",
+    "bytes": 3139,
+    "sha256": "27ebc61a3f157303714329c270f77369fb54ae8e7a5b2f79aa23e1bbaa7ce26d"
+  },
+  {
+    "path": "lesson-03/result/outputs/after/comparison.json",
+    "bytes": 1722,
+    "sha256": "429f539268af08bf01db0ef5d37144b9d5e4efb1d7ae2d23a41f8e1278a95392"
+  },
+  {
+    "path": "lesson-03/result/outputs/after/organizer.step",
+    "bytes": 34264,
+    "sha256": "39eb20b9cefa60acef54b08cf72fd3e0cc654a0402d832b45f11e93e956ca0dd"
+  },
+  {
+    "path": "lesson-03/result/outputs/after/organizer.stl",
+    "bytes": 46684,
+    "sha256": "8c2668ae3fe4a8a370c59512395636682c5c93cebf54a6be30fe2706d2391bf3"
+  },
+  {
+    "path": "lesson-03/result/outputs/after/preview.png",
+    "bytes": 20298,
+    "sha256": "baae3cad943028c2756f5e4a0aad70919bfe6780530e9b8a147ce8940f6ecf23"
+  },
+  {
+    "path": "lesson-03/result/outputs/after/verified.json",
+    "bytes": 561,
+    "sha256": "3ec358f9ddb04c5aaa878793e832c40cd5b2525aa5efa767a88f83de566c22ec"
+  },
+  {
+    "path": "lesson-03/result/outputs/after/viewer.html",
+    "bytes": 143625,
+    "sha256": "6070b691797c8f1a552c0658760f7d1cde51be28907f1f8fae06fa56bddcb550"
+  },
+  {
+    "path": "lesson-03/result/outputs/edited/organizer.step",
+    "bytes": 126007,
+    "sha256": "36170102995f3095a9ec819565c1d918068b02f29a1e15deda202ecebfc9f0ba"
+  },
+  {
+    "path": "lesson-03/result/outputs/edited/organizer.stl",
+    "bytes": 198484,
+    "sha256": "7e233007aacf887f2f31393d2683d7b590574e567d0043543a4fab48f0739533"
+  },
+  {
+    "path": "lesson-03/result/outputs/edited/verified.json",
+    "bytes": 339,
+    "sha256": "232c4902bdd6eea64a20e9b9466eb99f069c0b434cc62625e718e4ec136f2d62"
+  },
+  {
+    "path": "lesson-03/result/outputs/exercise-edit/organizer.step",
+    "bytes": 125992,
+    "sha256": "3d664b799c69e8af7a8d9bc8904019ea019b2459127bda791b4ccfb2eb76f4d7"
+  },
+  {
+    "path": "lesson-03/result/outputs/exercise-edit/organizer.stl",
+    "bytes": 198484,
+    "sha256": "2ddf40cf5b9272654f4a69fd137c62d5f2bc2c6d50862b99b208bf510ca05cb0"
+  },
+  {
+    "path": "lesson-03/result/outputs/exercise-edit/verified.json",
+    "bytes": 338,
+    "sha256": "729d98714e21481026d07030b96c32aa29675cb1c6976ff33ccc4ea15ca6477a"
+  },
+  {
+    "path": "lesson-03/result/reopen_and_edit.py",
+    "bytes": 3234,
+    "sha256": "2a2136e9e0edd4860326e18a1094d4bd703deb395af766352055be2945ff3c76"
+  },
+  {
+    "path": "lesson-03/result/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-03/result/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-03/result/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-03/solutions/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-03/solutions/README.md",
+    "bytes": 126,
+    "sha256": "88dd588aef35c92e18728268a17af2a6bc2c3503db3fa00f486ff75f3c7a2f1b"
+  },
+  {
+    "path": "lesson-03/solutions/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-03/solutions/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-03/solutions/model.py",
+    "bytes": 3139,
+    "sha256": "27ebc61a3f157303714329c270f77369fb54ae8e7a5b2f79aa23e1bbaa7ce26d"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/after/comparison.json",
+    "bytes": 1722,
+    "sha256": "429f539268af08bf01db0ef5d37144b9d5e4efb1d7ae2d23a41f8e1278a95392"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/after/organizer.step",
+    "bytes": 34264,
+    "sha256": "39eb20b9cefa60acef54b08cf72fd3e0cc654a0402d832b45f11e93e956ca0dd"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/after/organizer.stl",
+    "bytes": 46684,
+    "sha256": "8c2668ae3fe4a8a370c59512395636682c5c93cebf54a6be30fe2706d2391bf3"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/after/preview.png",
+    "bytes": 20298,
+    "sha256": "baae3cad943028c2756f5e4a0aad70919bfe6780530e9b8a147ce8940f6ecf23"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/after/verified.json",
+    "bytes": 561,
+    "sha256": "3ec358f9ddb04c5aaa878793e832c40cd5b2525aa5efa767a88f83de566c22ec"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/after/viewer.html",
+    "bytes": 143625,
+    "sha256": "6070b691797c8f1a552c0658760f7d1cde51be28907f1f8fae06fa56bddcb550"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/edited/organizer.step",
+    "bytes": 126007,
+    "sha256": "36170102995f3095a9ec819565c1d918068b02f29a1e15deda202ecebfc9f0ba"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/edited/organizer.stl",
+    "bytes": 198484,
+    "sha256": "7e233007aacf887f2f31393d2683d7b590574e567d0043543a4fab48f0739533"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/edited/verified.json",
+    "bytes": 339,
+    "sha256": "232c4902bdd6eea64a20e9b9466eb99f069c0b434cc62625e718e4ec136f2d62"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/exercise-edit/organizer.step",
+    "bytes": 125992,
+    "sha256": "3d664b799c69e8af7a8d9bc8904019ea019b2459127bda791b4ccfb2eb76f4d7"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/exercise-edit/organizer.stl",
+    "bytes": 198484,
+    "sha256": "2ddf40cf5b9272654f4a69fd137c62d5f2bc2c6d50862b99b208bf510ca05cb0"
+  },
+  {
+    "path": "lesson-03/solutions/outputs/exercise-edit/verified.json",
+    "bytes": 338,
+    "sha256": "729d98714e21481026d07030b96c32aa29675cb1c6976ff33ccc4ea15ca6477a"
+  },
+  {
+    "path": "lesson-03/solutions/reopen_and_edit.py",
+    "bytes": 3234,
+    "sha256": "2a2136e9e0edd4860326e18a1094d4bd703deb395af766352055be2945ff3c76"
+  },
+  {
+    "path": "lesson-03/solutions/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-03/solutions/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-03/solutions/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  },
+  {
+    "path": "lesson-03/start/CAD-API.md",
+    "bytes": 544,
+    "sha256": "ebdffa485b5c5bcc773b53832304424424a5f6c2e6a1a5378a65b8a9d08abfa8"
+  },
+  {
+    "path": "lesson-03/start/PROMPTS.md",
+    "bytes": 1417,
+    "sha256": "23d8021ddce04878d75cfa28472f173f9d16e01083dd23d8c8e9ca8334759381"
+  },
+  {
+    "path": "lesson-03/start/README.md",
+    "bytes": 122,
+    "sha256": "b86a053f369786949a279261458c4654fdd8273fce755b1ec4541bfb13338c78"
+  },
+  {
+    "path": "lesson-03/start/SPEC.md",
+    "bytes": 490,
+    "sha256": "6e186ffcd8df174b6f8190fe03f556e7278fd780f3c3de10ded1831921ed283f"
+  },
+  {
+    "path": "lesson-03/start/environment_check.py",
+    "bytes": 249,
+    "sha256": "357ca0821168ea292051098cc25a9fc3459ac00507633de39f16cbade0a8f6c5"
+  },
+  {
+    "path": "lesson-03/start/model.py",
+    "bytes": 3139,
+    "sha256": "27ebc61a3f157303714329c270f77369fb54ae8e7a5b2f79aa23e1bbaa7ce26d"
+  },
+  {
+    "path": "lesson-03/start/outputs/after/comparison.json",
+    "bytes": 1722,
+    "sha256": "429f539268af08bf01db0ef5d37144b9d5e4efb1d7ae2d23a41f8e1278a95392"
+  },
+  {
+    "path": "lesson-03/start/outputs/after/organizer.step",
+    "bytes": 34264,
+    "sha256": "39eb20b9cefa60acef54b08cf72fd3e0cc654a0402d832b45f11e93e956ca0dd"
+  },
+  {
+    "path": "lesson-03/start/outputs/after/organizer.stl",
+    "bytes": 46684,
+    "sha256": "8c2668ae3fe4a8a370c59512395636682c5c93cebf54a6be30fe2706d2391bf3"
+  },
+  {
+    "path": "lesson-03/start/outputs/after/preview.png",
+    "bytes": 20298,
+    "sha256": "baae3cad943028c2756f5e4a0aad70919bfe6780530e9b8a147ce8940f6ecf23"
+  },
+  {
+    "path": "lesson-03/start/outputs/after/verified.json",
+    "bytes": 561,
+    "sha256": "3ec358f9ddb04c5aaa878793e832c40cd5b2525aa5efa767a88f83de566c22ec"
+  },
+  {
+    "path": "lesson-03/start/outputs/after/viewer.html",
+    "bytes": 143625,
+    "sha256": "6070b691797c8f1a552c0658760f7d1cde51be28907f1f8fae06fa56bddcb550"
+  },
+  {
+    "path": "lesson-03/start/reopen_and_edit.py",
+    "bytes": 315,
+    "sha256": "1b589f2b5688b8247e87b3bc3d74b3b09380318e7b5990cfc5ed4b7bd6b48850"
+  },
+  {
+    "path": "lesson-03/start/requirements.txt",
+    "bytes": 31,
+    "sha256": "4cc2313a54865ac03827e9c2f7975e10071070579aa0f79be94f3a9adbcd691e"
+  },
+  {
+    "path": "lesson-03/start/verify_edited.py",
+    "bytes": 1743,
+    "sha256": "1ac072b62737df384a27be0853cbad5463b2f3f9380c18e4a5b15da8dd3a9e98"
+  },
+  {
+    "path": "lesson-03/start/verify_one.py",
+    "bytes": 2103,
+    "sha256": "da9805d94577555e26968b996e7b67f5a1f2619d27887003c4c56584fdcbf6c6"
+  }
+]

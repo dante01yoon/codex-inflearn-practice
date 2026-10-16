@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "dimensions_mm": [
+    80.0,
+    30.000000000000004,
+    4.0
+  ],
+  "measured_cable_diameters_mm": {
+    "-27": 7.0,
+    "-9": 7.0,
+    "9": 7.0,
+    "27": 7.0
+  },
+  "original_code_before_after_preserved": true
+}

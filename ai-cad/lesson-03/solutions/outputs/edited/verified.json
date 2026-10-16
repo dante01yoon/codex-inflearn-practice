@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "added_hole_mm": 5.0,
+  "checks": {
+    "normal_one_solid": true,
+    "outer_dimensions": true,
+    "four_cables_unchanged": true,
+    "two_mounts_unchanged": true,
+    "new_hole_exact_location": true,
+    "new_hole_empty": true,
+    "surrounding_material_preserved": true
+  },
+  "volume_mm3": 10341.453507051807
+}

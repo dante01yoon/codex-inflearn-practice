@@ -59,6 +59,17 @@ python3 fetch_chargers.py
 |---|---|---|
 | [bonus-factory](bonus-factory/) | 섹션 16 앱 위에 쌓는 팩토리 라인: `scripts/factory.sh`(분류 → 재현 테스트 → 수정 → 리뷰 → 전후 화면 → PR), 공정 스킬 5개, AGENTS.md 분류 표. 실제 이슈·PR이 있는 전체 저장소는 https://github.com/dante01yoon/ev-booking-factory | 보너스 1강 |
 
+## 추가 섹션. 소프트웨어와 하드웨어를 AI로 연결하기
+
+| 폴더 | 내용 | 수업 |
+|---|---|---|
+| [ai-cad](ai-cad/) | 기존 강의 저장소에서 이어 시작하는 CAD 기초 실습. macOS·Windows 준비 명령, 요청문·과제·정답 | CAD 기초 3강 |
+| [ai-cad/lesson-01/start](ai-cad/lesson-01/start/) | 코드가 없는 시작 상태에서 케이블 정리대 생성·STEP/STL 저장·치수 검사 | 첫 설계 |
+| [ai-cad/lesson-02/start](ai-cad/lesson-02/start/) | 케이블 구멍6→8mm, 두께3→5mm 수정. 원본 보존·독립 검사 | 치수 수정 |
+| [ai-cad/lesson-03/start](ai-cad/lesson-03/start/) | 저장 STEP 재열기·추가 가공·재저장·재검증 | 파일 다시 열기 |
+
+코덱스 앱에서 각 `start` 폴더를 작업 폴더로 열고 `PROMPTS.md`의 환경 준비 요청부터 입력합니다. CLI 사용자도 같은 폴더·요청을 사용합니다. HTML은 결과 확인용 선택 뷰어입니다. 이번 CAD 촬영은 2026-10-16 macOS의 실제 Codex CLI로 진행했으며 Windows 실행은 미검증입니다.
+
 ## 데이터 출처
 
 `data/*.json`은 공공데이터포털 「한국환경공단_전기자동차 충전소 정보」(https://www.data.go.kr/data/15076352/openapi.do)에서 2026-10-08에 조회한 일부입니다. 이용허락범위: 공공저작물 출처표시(제1유형). 지도 바탕은 © OpenStreetMap 기여자.

@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "file": "organizer.step",
+  "dimensions_mm": [
+    80.0,
+    30.000000000000004,
+    4.0
+  ],
+  "hole_mm": 7.0,
+  "volume_mm3": 8524.001267282349,
+  "checks": {
+    "valid_solid": true,
+    "width": true,
+    "depth": true,
+    "thickness": true,
+    "base_z": true,
+    "cable_-27": true,
+    "cable_-9": true,
+    "cable_9": true,
+    "cable_27": true,
+    "mount_-34": true,
+    "mount_34": true,
+    "slot_-27": true,
+    "slot_-9": true,
+    "slot_9": true,
+    "slot_27": true,
+    "no_unrequested_hole": true
+  }
+}
